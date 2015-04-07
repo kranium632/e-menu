@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+ 	
+	<!-- Répartition 1/3 2/3 pour que les boutons soient centrés en milieu haut -->
+	<!-- Occupe un espace en haut -->
+	<View
+		android:layout_width="1dp"
+		android:layout_height="0dip"
+		android:layout_weight="1" />
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+	        
+	    <Button
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_centerInParent="true"
+	        android:text="@string/button_fr_FR"
+	        android:onClick="showMenuFR" />
+	     
+	        
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+	        
+	    <Button
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_centerInParent="true"
+	        android:text="@string/button_en_EN"
+	        android:onClick="showMenuEN" />
+	     
+	        
+    </RelativeLayout>
+	<!-- Occupe deux espaces en bas -->
+	<View
+		android:layout_width="1dp"
+		android:layout_height="0dip"
+		android:layout_weight="1" />
+
+	<View
+		android:layout_width="1dp"
+		android:layout_height="0dip"
+		android:layout_weight="1" />
+    
+</LinearLayout>
