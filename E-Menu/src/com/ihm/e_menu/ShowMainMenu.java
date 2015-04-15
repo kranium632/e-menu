@@ -1,11 +1,11 @@
 package com.ihm.e_menu;
 
-import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
-//import android.support.v4.app.NavUtils;
+import android.view.View;
 
 public class ShowMainMenu extends Activity {
 
@@ -38,6 +38,26 @@ public class ShowMainMenu extends Activity {
 			welcomeString = "Bienvenue dans notre restaurant !";
 		textViewToChange.setText(welcomeString);
 		//*/
+	}
+	
+	public void showMenuCarte(View v1){
+		Intent carte = new Intent(this, MenuCarte.class);
+		startActivity(carte);
+	}
+	
+	public void showMenuMenus(View v2){
+		Intent menus = new Intent(this, MenuMenus.class);
+		startActivity(menus);
+	}
+	
+	public void showMenuChildren(View v3){
+		Intent children = new Intent(this, MenuChildren.class);
+		startActivity(children);
+	}
+	
+	public void showMenuSearch(View v4){
+		Intent search = new Intent(this, MenuSearch.class);
+		startActivity(search);
 	}
 
 	/**

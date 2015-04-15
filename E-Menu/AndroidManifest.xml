@@ -30,6 +30,22 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.ihm.e_menu" />
         </activity>
+        <activity
+            android:name="com.ihm.e_menu.MenuCarte"
+            android:label="@string/title_activity_menu_carte" >
+        </activity>
+        <activity
+            android:name="com.ihm.e_menu.MenuMenus"
+            android:label="@string/title_activity_menu_menus" >
+        </activity>
+        <activity
+            android:name="com.ihm.e_menu.MenuChildren"
+            android:label="@string/title_activity_menu_children" >
+        </activity>
+        <activity
+            android:name="com.ihm.e_menu.MenuSearch"
+            android:label="@string/title_activity_menu_search" >
+        </activity>
     </application>
 
 </manifest>

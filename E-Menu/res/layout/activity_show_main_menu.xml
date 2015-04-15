@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/tableLayout1"
+    android:id="@+id/mainMenuTableLayout1"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:layout_gravity="center" >
@@ -8,11 +8,10 @@
     <!-- 2 columns -->
 
     <TableRow
-        android:id="@+id/tableRow1"
+        android:id="@+id/mainMenuTableRow1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="0.5"
-        android:padding="5dip" >
+        android:layout_weight="0.5">
 
         <Button
             android:layout_height="fill_parent"
@@ -28,22 +27,21 @@
     </TableRow>
 
     <TableRow
-        android:id="@+id/tableRow2"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_weight="0.5"
-        android:padding="5dip" >
+        android:id="@+id/mainMenuTableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5" >
 
         <Button
             android:layout_height="fill_parent"
             android:layout_weight="0.5"
-            android:onClick="showMenuEnfants"
+            android:onClick="showMenuChildren"
             android:text="@string/main_menu_enfants" />
 
         <Button
             android:layout_height="fill_parent"
             android:layout_weight="0.5"
-            android:onClick="showMenuRecherche"
+            android:onClick="showMenuSearch"
             android:text="@string/main_menu_recherche" />
     </TableRow>
 
