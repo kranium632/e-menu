@@ -46,6 +46,14 @@
             android:name="com.ihm.e_menu.MenuSearch"
             android:label="@string/title_activity_menu_search" >
         </activity>
+        <activity
+            android:name="com.ihm.e_menu.MenuWines"
+            android:label="@string/title_activity_menu_wines" >
+        </activity>
+        <activity
+            android:name="com.ihm.e_menu.MenuDrinks"
+            android:label="@string/title_activity_menu_drinks" >
+        </activity>
     </application>
 
 </manifest>

@@ -59,6 +59,16 @@ public class ShowMainMenu extends Activity {
 		Intent search = new Intent(this, MenuSearch.class);
 		startActivity(search);
 	}
+	
+	public void showMenuDrinks(View v5){
+		Intent search = new Intent(this, MenuDrinks.class);
+		startActivity(search);
+	}
+	
+	public void showMenuWines(View v6){
+		Intent search = new Intent(this, MenuWines.class);
+		startActivity(search);
+	}
 
 	/**
 	 * Set up the {@link android.app.ActionBar}.

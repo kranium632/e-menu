@@ -30,6 +30,25 @@
         android:id="@+id/mainMenuTableRow2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_weight="0.5">
+
+        <Button
+            android:layout_height="fill_parent"
+            android:layout_weight="0.5"
+            android:onClick="showMenuDrinks"
+            android:text="@string/main_menu_drinks" />
+
+        <Button
+            android:layout_height="fill_parent"
+            android:layout_weight="0.5"
+            android:onClick="showMenuWines"
+            android:text="@string/main_menu_wines" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/mainMenuTableRow3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_weight="0.5" >
 
         <Button
