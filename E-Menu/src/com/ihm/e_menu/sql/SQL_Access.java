@@ -1,4 +1,4 @@
-package com.ihm.e_menu.tools;
+package com.ihm.e_menu.sql;
 
 import java.util.Vector;
 
