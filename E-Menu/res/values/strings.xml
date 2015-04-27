@@ -15,8 +15,8 @@
     <!--  -->
     <string name="main_menu_carte">À la Carte</string>
     <string name="main_menu_menus">Menus</string>
-    <string name="main_menu_drinks">Boisson</string>
-    <string name="main_menu_wines">Carte de Vins</string>
+    <string name="main_menu_drinks">Boissons</string>
+    <string name="main_menu_wines">Carte des Vins</string>
     <string name="main_menu_enfants">Pour les\nEnfants</string>
     <string name="main_menu_recherche">Recherche</string>
 
@@ -31,19 +31,21 @@
     <!--  -->
     <string name="menu_carte">À la Carte</string>
     <string name="menu_menus">Menus</string>
-    <string name="menu_drinks">Boisson</string>
-    <string name="menu_wines">Carte de Vins</string>
+    <string name="menu_drinks">Boissons</string>
+    <string name="menu_wines">Carte des Vins</string>
     <string name="menu_children">Pour les Enfants</string>
     <string name="menu_search">Recherche - Filtres</string>
 
     <!-- Carte -->
     <string name="carte_starters">Entrées</string>
     <string name="carte_meals">Plats</string>
+    <string name="carte_desserts">Desserts</string>
     <string name="carte_drinks">Boissons</string>
     <string name="carte_wines">Carte des Vins</string>
 
     <!--  -->
     <string name="hello_world">Hello world!</string>
     <string name="welcome">Hello world!</string>
+    <string name="title_activity_carte">Carte</string>
 
 </resources>
