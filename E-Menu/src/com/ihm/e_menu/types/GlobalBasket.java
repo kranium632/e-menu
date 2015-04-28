@@ -2,6 +2,8 @@ package com.ihm.e_menu.types;
 
 import java.util.Vector;
 
+import com.ihm.e_menu.sql.SQL_Access;
+
 import android.app.Application;
 
 public class GlobalBasket extends Application {
@@ -9,6 +11,16 @@ public class GlobalBasket extends Application {
 	
 	public GlobalBasket(){
 		this.basket = new Basket();
+		this.basket.setDrinks(SQL_Access.getDrinks());
+		this.basket.setMeals(SQL_Access.getAllPlat());
+		this.basket.setMenus(SQL_Access.getAllMenu());
+	}
+	
+	public void init(){
+		this.basket = new Basket();
+		this.basket.setDrinks(SQL_Access.getDrinks());
+		this.basket.setMeals(SQL_Access.getAllPlat());
+		this.basket.setMenus(SQL_Access.getAllMenu());
 	}
 
 	public void addPlat(Plat p){

@@ -64,9 +64,10 @@ public class SQL_Access {
 	 * 
 	 * @return Vector<Aliment>
 	 */
-	public static Vector<Aliment> getDrinks(){
-		Vector<Aliment> results = new Vector<Aliment>();
+	public static Vector<Boisson> getDrinks(){
+		Vector<Boisson> results = new Vector<Boisson>();
 		results.add(Dummies.getDummyDrink());
+		results.add(Dummies.getDummyWine());
 		return results;
 	}
 	
@@ -75,9 +76,10 @@ public class SQL_Access {
 	 * 
 	 * @return Vector<Aliment>
 	 */
-	public static Vector<Aliment> getDrinks(int id[]){
-		Vector<Aliment> results = new Vector<Aliment>();
+	public static Vector<Boisson> getDrinks(int id[]){
+		Vector<Boisson> results = new Vector<Boisson>();
 		results.add(Dummies.getDummyDrink());
+		results.add(Dummies.getDummyWine());
 		return results;
 	}
 	

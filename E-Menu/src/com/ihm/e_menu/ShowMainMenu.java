@@ -3,11 +3,15 @@ package com.ihm.e_menu;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
 public class ShowMainMenu extends Activity {
+	Thread t;
+	// Déclaration d'un handler pour pouvoir exécuter des objets Runnable dans l'UI Thread
+    Handler msgHandler = new Handler();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -15,6 +19,8 @@ public class ShowMainMenu extends Activity {
 		setContentView(R.layout.activity_show_main_menu);
 		// Show the Up button in the action bar.
 		setupActionBar();
+
+        t = new MonThread(msgHandler);
 		/*
 		final TextView textViewToChange = (TextView)findViewById(R.id.welcome);
 		Bundle extras = getIntent().getExtras();
@@ -102,5 +108,56 @@ public class ShowMainMenu extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+	
+	
+	/* ********************************** */
+	/* GESTION DU THREAD DE ************* */
+	/* RÉCUPÉRATION DE LA BASE DE DONNÉES */
+	/* ********************************** */
+	@Override
+	protected void onResume() {
+		super.onResume();
+			
+        t.start();
+	}
+	
+	@Override
+	protected void onPause() {
+		super.onPause();
+		
+	    t.interrupt();
+	}
+	
+    // Thread qui va effectuer des opérations très longues...
+    public class MonThread extends Thread {
+    	Handler handlerDial;
+    	int i;
+    	
+        public MonThread(Handler handlerDial) {
+			// TODO Auto-generated constructor stub
+        	this.handlerDial=handlerDial;
+		}
+
+		public void run() {
+            // Traitement
+			//À remplacer par l'init du panier global
+            try {
+            	for (i=0; i<=100; i++)
+            	{
+            		Thread.sleep(2000); // Traitement long...
+            		
+            		// Envoi de l'objet Runnable a UI Thread pour faire avancer la barre de progression
+            		handlerDial.post(new Runnable() {
+            			public void run() {
+            				//progress.setProgress(i);
+            			}
+            		});
+            	}
+            } catch (InterruptedException ex) {
+                Thread.currentThread().interrupt(); // Marque le thread comme interrompu
+                return;
+            }
+        }
+    }
 
 }

@@ -5,7 +5,7 @@
     android:layout_height="fill_parent"
     android:layout_gravity="center" >
 
-    <!-- 2 columns -->
+    <!-- 3 columns -->
 
     <TableRow
         android:id="@+id/mainMenuTableRow1"
