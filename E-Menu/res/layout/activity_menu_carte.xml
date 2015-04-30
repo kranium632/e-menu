@@ -1,52 +1,66 @@
-<?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/carteMenusTableLayout"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/carteMenuLinearLayout"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:layout_gravity="center" >
+    android:layout_gravity="center"
+    android:orientation="horizontal" >
 
-    <!-- 2 columns -->
-
-    <TableRow
-        android:id="@+id/mainMenuTableRow1"
-        android:layout_width="match_parent"
+    <ListView
+        android:id="@+id/navigation"
+        android:visibility="gone"
+        android:layout_width="120dp"
         android:layout_height="match_parent"
-        android:layout_weight="0.5">
+        android:background="#111">
+    </ListView>
 
-        <Button
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_height="fill_parent"
-            android:layout_weight="0.5"
-            android:onClick="showCarteStarters"
-            android:text="@string/carte_starters" />
+    <TableLayout
+        android:id="@+id/mainMenuTableLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:orientation="horizontal" >
 
-        <Button
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_height="fill_parent"
-            android:layout_weight="0.5"
-            android:onClick="showCarteMeals"
-            android:text="@string/carte_meals" />
-    </TableRow>
+        <TableRow
+            android:id="@+id/mainMenuTableRow1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5" >
 
-    <TableRow
-        android:id="@+id/mainMenuTableRow2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="0.5">
+            <Button
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.5"
+                android:onClick="showCarteStarters"
+                android:text="@string/carte_starters" />
 
-        <Button
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_height="fill_parent"
-            android:layout_weight="0.5"
-            android:onClick="showCarteDesserts"
-            android:text="@string/carte_desserts" />
+            <Button
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.5"
+                android:onClick="showCarteMeals"
+                android:text="@string/carte_meals" />
+        </TableRow>
 
-        <Button
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_height="fill_parent"
-            android:layout_weight="0.5"
-            android:onClick="showCarteDrinks"
-            android:text="@string/carte_drinks" />
-    </TableRow>
+        <TableRow
+            android:id="@+id/mainMenuTableRow2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5" >
 
-</TableLayout>
+            <Button
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.5"
+                android:onClick="showCarteDesserts"
+                android:text="@string/carte_desserts" />
+
+            <Button
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.5"
+                android:onClick="showCarteDrinks"
+                android:text="@string/carte_drinks" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

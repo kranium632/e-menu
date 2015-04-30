@@ -18,7 +18,7 @@ public class ShowMainMenu extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_show_main_menu);
 		// Show the Up button in the action bar.
-		setupActionBar();
+		//setupActionBar();
 		//Initialisation du panier
 		GlobalBasket.init();
 		CompleteList.init(SQL_Access.getCompleteList());
@@ -90,7 +90,7 @@ public class ShowMainMenu extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.show_main_menu, menu);
+		//getMenuInflater().inflate(R.menu.show_main_menu, menu);
 		return true;
 	}
 
