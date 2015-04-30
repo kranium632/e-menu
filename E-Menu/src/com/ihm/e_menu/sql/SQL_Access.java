@@ -7,7 +7,7 @@ import android.os.Handler;
 import com.ihm.e_menu.types.Aliment;
 import com.ihm.e_menu.types.Basket;
 import com.ihm.e_menu.types.Boisson;
-import com.ihm.e_menu.types.Menu;
+import com.ihm.e_menu.types.MenuA;
 import com.ihm.e_menu.types.Plat;
 
 public class SQL_Access {
@@ -121,14 +121,14 @@ public class SQL_Access {
 		return results;
 	}
 	
-	public static Vector<Menu> getMenus(){
-		Vector<Menu> results = new Vector<Menu>();
+	public static Vector<MenuA> getMenus(){
+		Vector<MenuA> results = new Vector<MenuA>();
 		results.add(Dummies.getDummyMenu());
 		return results;
 	}
 	
-	public static Vector<Menu> getMenu(int id[]){
-		Vector<Menu> results = new Vector<Menu>();
+	public static Vector<MenuA> getMenu(int id[]){
+		Vector<MenuA> results = new Vector<MenuA>();
 		results.add(Dummies.getDummyMenu());
 		return results;	
 	}

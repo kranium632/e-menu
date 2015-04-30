@@ -1,6 +1,11 @@
 package com.ihm.e_menu;
 
+import java.util.Vector;
+
 import com.ihm.e_menu.R;
+import com.ihm.e_menu.types.CompleteList;
+import com.ihm.e_menu.types.MenuA;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -40,6 +45,9 @@ public class MenuCarte extends Activity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.menu_carte, menu);
+		Vector<MenuA> m = CompleteList.getMenus();
+		String s = m.get(0).getName();
+		
 		return true;
 	}
 

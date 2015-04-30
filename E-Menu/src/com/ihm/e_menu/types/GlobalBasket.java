@@ -2,72 +2,66 @@ package com.ihm.e_menu.types;
 
 import java.util.Vector;
 
-import android.app.Application;
-
-public class GlobalBasket extends Application {
-	private Basket basket;// = new Basket();
+public class GlobalBasket {
+	private static Basket basket;
 	
-	public GlobalBasket(){
-		this.basket = new Basket();
-	}
-	
-	public void init(){
-		this.basket = new Basket();
+	public static void init(){
+		GlobalBasket.basket = new Basket();
 	}
 
-	public void addPlat(Plat p){
-		this.basket.addPlat(p);
+	public static void addPlat(Plat p){
+		GlobalBasket.basket.addPlat(p);
 	}
 	
-	public void addMenu(Menu m){
-		this.basket.addMenu(m);
+	public static void addMenu(MenuA m){
+		GlobalBasket.basket.addMenu(m);
 	}
 	
-	public void addBoisson(Boisson b){
-		this.basket.addBoisson(b);
+	public static void addBoisson(Boisson b){
+		GlobalBasket.basket.addBoisson(b);
 	}
 	
-	public void removePlat(Plat p){
-		this.basket.removePlat(p);
+	public static void removePlat(Plat p){
+		GlobalBasket.basket.removePlat(p);
 	}
 	
-	public void removeMenu(Menu m){
-		this.basket.removeMenu(m);
+	public static void removeMenu(MenuA m){
+		GlobalBasket.basket.removeMenu(m);
 	}
 	
-	public void removeBoisson(Boisson b){
-		this.basket.removeBoisson(b);
+	public static void removeBoisson(Boisson b){
+		GlobalBasket.basket.removeBoisson(b);
 	}
 	
-	public Vector<Plat> getMeals() {
-		return this.basket.getMeals();
+	public static Vector<Plat> getMeals() {
+		return GlobalBasket.basket.getMeals();
 	}
 
-	public Vector<Menu> getMenus() {
-		return this.basket.getMenus();
+	public static Vector<MenuA> getMenus() {
+		return GlobalBasket.basket.getMenus();
 	}
 
-	public Vector<Boisson> getDrinks() {
-		return this.basket.getDrinks();
+	public static Vector<Boisson> getDrinks() {
+		return GlobalBasket.basket.getDrinks();
 	}
 
-	public void setMeals(Vector<Plat> meals) {
-		this.basket.setMeals(meals);
+	public static void setMeals(Vector<Plat> meals) {
+		GlobalBasket.basket.setMeals(meals);
 	}
 
-	public void setMenus(Vector<Menu> menus) {
-		this.basket.setMenus(menus);
+	public static void setMenus(Vector<MenuA> menus) {
+		GlobalBasket.basket.setMenus(menus);
 	}
 
-	public void setDrinks(Vector<Boisson> drinks) {
-		this.basket.setDrinks(drinks);
+	public static void setDrinks(Vector<Boisson> drinks) {
+		GlobalBasket.basket.setDrinks(drinks);
 	}
 	
-	public Basket getBasket() {
+	public static Basket getBasket() {
 		return basket;
 	}
 
-	public void setBasket(Basket basket) {
-		this.basket = basket;
+	public static void setBasket(Basket basket) {
+		GlobalBasket.basket = basket;
 	}
 }

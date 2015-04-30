@@ -2,24 +2,22 @@ package com.ihm.e_menu.types;
 
 import java.util.Vector;
 
-import android.app.Application;
-
-public class CompleteList extends Application{
-	Basket basket;
+public class CompleteList {
+	private static Basket basket;
 	
-	public void init(Basket b){
-		basket =  b;
+	public static void init(Basket b){
+		CompleteList.basket =  b;
 	}
 	
-	public Vector<Boisson> getDrinks(){
-		return basket.getDrinks();
+	public static Vector<Boisson> getDrinks(){
+		return CompleteList.basket.getDrinks();
 	}
 	
-	public Vector<Plat> getMeals(){
-		return basket.getMeals();
+	public static Vector<Plat> getMeals(){
+		return CompleteList.basket.getMeals();
 	}
 	
-	public Vector<Menu> getMenus(){
-		return basket.getMenus();
+	public static Vector<MenuA> getMenus(){
+		return CompleteList.basket.getMenus();
 	}
 }

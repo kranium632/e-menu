@@ -4,16 +4,16 @@ import java.util.Vector;
 
 public class Basket {
 	private Vector<Plat> meals;
-	private Vector<Menu> menus;
+	private Vector<MenuA> menus;
 	private Vector<Boisson> drinks;
 	
 	public Basket(){
 		this.meals = new Vector<Plat>();
-		this.menus = new Vector<Menu>();
+		this.menus = new Vector<MenuA>();
 		this.drinks = new Vector<Boisson>();
 	}
 	
-	public Basket(Vector<Plat> plats, Vector<Menu> menus, Vector<Boisson> drinks){
+	public Basket(Vector<Plat> plats, Vector<MenuA> menus, Vector<Boisson> drinks){
 		this.meals = plats;
 		this.menus = menus;
 		this.drinks = drinks;
@@ -23,7 +23,7 @@ public class Basket {
 		this.meals.add(p);
 	}
 	
-	public void addMenu(Menu m){
+	public void addMenu(MenuA m){
 		this.menus.add(m);
 	}
 	
@@ -35,7 +35,7 @@ public class Basket {
 		this.meals.remove(p);
 	}
 	
-	public void removeMenu(Menu m){
+	public void removeMenu(MenuA m){
 		this.menus.remove(m);
 	}
 	
@@ -47,7 +47,7 @@ public class Basket {
 		return meals;
 	}
 
-	public Vector<Menu> getMenus() {
+	public Vector<MenuA> getMenus() {
 		return menus;
 	}
 
@@ -59,7 +59,7 @@ public class Basket {
 		this.meals = meals;
 	}
 
-	public void setMenus(Vector<Menu> menus) {
+	public void setMenus(Vector<MenuA> menus) {
 		this.menus = menus;
 	}
 

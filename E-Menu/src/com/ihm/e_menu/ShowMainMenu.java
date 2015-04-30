@@ -7,7 +7,6 @@ import com.ihm.e_menu.types.GlobalBasket;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -21,8 +20,8 @@ public class ShowMainMenu extends Activity {
 		// Show the Up button in the action bar.
 		setupActionBar();
 		//Initialisation du panier
-		((GlobalBasket)this.getApplication()).init();
-		((CompleteList)this.getApplication()).init(SQL_Access.getCompleteList());
+		GlobalBasket.init();
+		CompleteList.init(SQL_Access.getCompleteList());
 
 		/*
 		final TextView textViewToChange = (TextView)findViewById(R.id.welcome);

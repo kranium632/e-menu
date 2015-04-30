@@ -4,7 +4,7 @@ import java.util.Vector;
 
 import com.ihm.e_menu.types.Aliment;
 import com.ihm.e_menu.types.Boisson;
-import com.ihm.e_menu.types.Menu;
+import com.ihm.e_menu.types.MenuA;
 import com.ihm.e_menu.types.Plat;
 
 public class Dummies {
@@ -58,7 +58,7 @@ public class Dummies {
 		return new Plat("Côte de Boeuf et ses Frites rustiques", 0, description, "link:none", aliments, tags, (float)10.0);
 	}
 	
-	public static final Menu getDummyMenu(){
+	public static final MenuA getDummyMenu(){
 		Vector<String> tags = new Vector<String>();
 		tags.addAll(getDummyAlimentViande().getTags());
 		tags.addAll(getDummyAlimentLegumes().getTags());
@@ -72,6 +72,6 @@ public class Dummies {
 		Vector<Boisson> boissons = new Vector<Boisson>();
 		boissons.add(getDummyWine());
 		
-		return new Menu("Menu simple", 0, description, "link:none", plat, boissons, tags, (float)12.0);
+		return new MenuA("Menu simple", 0, description, "link:none", plat, boissons, tags, (float)12.0);
 	}
 }
