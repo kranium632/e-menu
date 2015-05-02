@@ -11,22 +11,22 @@ import android.widget.ListView;
 public class MenuCarte extends Activity {
 
 	public void showCarteStarters(View v1) {
-		Intent children = new Intent(this, MenuChildren.class);
+		Intent children = new Intent(this, MenuStarters.class);
 		startActivity(children);
 	}
 
 	public void showCarteMeals(View v2) {
-		Intent search = new Intent(this, MenuSearch.class);
+		Intent search = new Intent(this, MenuMeals.class);
 		startActivity(search);
 	}
 
 	public void showCarteDesserts(View v3) {
-		Intent search = new Intent(this, MenuDrinks.class);
+		Intent search = new Intent(this, MenuDesserts.class);
 		startActivity(search);
 	}
 
 	public void showCarteDrinks(View v4) {
-		Intent search = new Intent(this, MenuWines.class);
+		Intent search = new Intent(this, MenuDrinks.class);
 		startActivity(search);
 	}
 
@@ -34,7 +34,7 @@ public class MenuCarte extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_menu_carte);
-		String[] nav_values = new String[] { "A La Carte", "Menus", "Enfants",
+		String[] nav_values = new String[] { "À La Carte", "Menus", "Enfants",
 				"Recherhe" };
 
 		ListView nav = (ListView) findViewById(R.id.navigation);

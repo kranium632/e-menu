@@ -34,6 +34,7 @@
     <string name="menu_drinks">Boissons</string>
     <string name="menu_wines">Carte des Vins</string>
     <string name="menu_children">Pour les Enfants</string>
+    <string name="menu_desserts">Desserts</string>
     <string name="menu_search">Recherche - Filtres</string>
 
     <!-- Carte -->
@@ -54,5 +55,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Example action</string>
+    <string name="title_activity_menu_desserts">MenuDesserts</string>
+    <string name="title_activity_show_menus_as_pop_up">ShowMenusAsPopUp</string>
 
 </resources>

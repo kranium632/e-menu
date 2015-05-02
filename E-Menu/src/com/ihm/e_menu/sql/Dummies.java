@@ -72,6 +72,6 @@ public class Dummies {
 		Vector<Boisson> boissons = new Vector<Boisson>();
 		boissons.add(getDummyWine());
 		
-		return new MenuA("Menu simple", 0, description, "link:none", plat, boissons, tags, (float)12.0);
+		return new MenuA("Côte de Boeuf", 0, description, "link:none", plat, boissons, tags, (float)12.0);
 	}
 }

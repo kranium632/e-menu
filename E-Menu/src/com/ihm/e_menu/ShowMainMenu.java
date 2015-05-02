@@ -55,6 +55,7 @@ public class ShowMainMenu extends Activity {
 	
 	public void showMenuMenus(View v2){
 		Intent menus = new Intent(this, MenuMenus.class);
+		menus.putExtra(MenuMenus.START, 0);
 		startActivity(menus);
 	}
 	
@@ -81,6 +82,7 @@ public class ShowMainMenu extends Activity {
 	/**
 	 * Set up the {@link android.app.ActionBar}.
 	 */
+	@SuppressWarnings("unused")
 	private void setupActionBar() {
 
 		getActionBar().setDisplayHomeAsUpEnabled(true);
