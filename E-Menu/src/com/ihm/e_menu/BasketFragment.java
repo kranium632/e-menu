@@ -11,7 +11,7 @@ public class BasketFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		View v = inflater.inflate(R.layout.basket_button, container,false);
+		View v = inflater.inflate(R.layout.basket_fragment, container, false);
 		return v;
 	}
 	
