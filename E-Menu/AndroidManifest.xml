@@ -29,19 +29,19 @@
             android:screenOrientation="landscape" >
         </activity>
         <activity
-            android:name="com.ihm.e_menu.MenuChildren"
+            android:name="com.ihm.e_menu.ChildrenMenuFragment"
             android:label="@string/title_activity_menu_children" >
         </activity>
         <activity
-            android:name="com.ihm.e_menu.MenuSearch"
+            android:name="com.ihm.e_menu.SearchFragment"
             android:label="@string/title_activity_menu_search" >
         </activity>
         <activity
-            android:name="com.ihm.e_menu.MenuWines"
+            android:name="com.ihm.e_menu.WinesFragment"
             android:label="@string/title_activity_menu_wines" >
         </activity>
         <activity
-            android:name="com.ihm.e_menu.MenuDrinks"
+            android:name="com.ihm.e_menu.DrinksFragment"
             android:label="@string/title_activity_menu_drinks" >
         </activity>
         <activity
@@ -49,7 +49,7 @@
             android:label="@string/title_activity_carte" >
         </activity>
         <activity
-            android:name="com.ihm.e_menu.MenuDesserts"
+            android:name="com.ihm.e_menu.DessertsFragment"
             android:label="@string/title_activity_menu_desserts" >
         </activity>
         <activity

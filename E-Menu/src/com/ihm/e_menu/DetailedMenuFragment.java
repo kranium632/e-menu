@@ -3,7 +3,7 @@ package com.ihm.e_menu;
 import java.util.Vector;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -16,7 +16,7 @@ import com.ihm.e_menu.types.CompleteList;
 import com.ihm.e_menu.types.GlobalBasket;
 import com.ihm.e_menu.types.MenuA;
 
-public class DetailedMenuFragment extends Fragment implements OnClickListener {
+public class DetailedMenuFragment extends DialogFragment implements OnClickListener {
 	public MenuA m = null;
 
 	@Override

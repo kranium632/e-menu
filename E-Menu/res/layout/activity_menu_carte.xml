@@ -7,10 +7,10 @@
 
     <ListView
         android:id="@+id/navigation"
-        android:visibility="gone"
         android:layout_width="120dp"
         android:layout_height="match_parent"
-        android:background="#111">
+        android:background="#111"
+        android:visibility="gone" >
     </ListView>
 
     <TableLayout
@@ -27,17 +27,17 @@
             android:layout_weight="0.5" >
 
             <Button
+                android:id="@+id/startersButton"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_height="fill_parent"
                 android:layout_weight="0.5"
-                android:onClick="showCarteStarters"
                 android:text="@string/carte_starters" />
 
             <Button
+                android:id="@+id/mealsButton"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_height="fill_parent"
                 android:layout_weight="0.5"
-                android:onClick="showCarteMeals"
                 android:text="@string/carte_meals" />
         </TableRow>
 
@@ -48,17 +48,17 @@
             android:layout_weight="0.5" >
 
             <Button
+                android:id="@+id/dessertsButton"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_height="fill_parent"
                 android:layout_weight="0.5"
-                android:onClick="showCarteDesserts"
                 android:text="@string/carte_desserts" />
 
             <Button
+                android:id="@+id/drinksButton"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_height="fill_parent"
                 android:layout_weight="0.5"
-                android:onClick="showCarteDrinks"
                 android:text="@string/carte_drinks" />
         </TableRow>
     </TableLayout>

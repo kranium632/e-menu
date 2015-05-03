@@ -3,8 +3,8 @@ package com.ihm.e_menu;
 import java.util.Vector;
 
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -75,18 +75,20 @@ public class MenusFragment extends Fragment {
 
 	
 	public void showPopUp(int id){
-		Fragment menu = new DetailedMenuFragment();
+		DialogFragment menu = new DetailedMenuFragment();
 		
 		Bundle bundle = new Bundle();
 		bundle.putInt(MENU_ID, id);
 		menu.setArguments(bundle);
 		
-		FragmentTransaction trans = getFragmentManager().beginTransaction();
+		menu.show(getFragmentManager(), "menu");
 		
-		trans.replace(R.id.content, menu);
-		trans.addToBackStack(null);
-		
-		trans.commit();
+//		FragmentTransaction trans = getFragmentManager().beginTransaction();
+//		
+//		trans.replace(R.id.content, menu);
+//		trans.addToBackStack(null);
+//		
+//		trans.commit();
 	}
 	
 	private OnClickListener onButtonClicked = new OnClickListener() {

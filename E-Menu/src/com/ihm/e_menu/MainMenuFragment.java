@@ -59,15 +59,14 @@ public class MainMenuFragment extends Fragment implements OnClickListener {
 		Button b = (Button) v.findViewById(R.id.showMenuCarte);
         b.setOnClickListener(this);
 		
-//        b = (Button) v.findViewById(R.id.showMenuChildren);
-//        b.setOnClickListener(this);
-//		
+        b = (Button) v.findViewById(R.id.showMenuChildren);
+        b.setOnClickListener(this);
+		
         b = (Button) v.findViewById(R.id.showMenuMenus);
         b.setOnClickListener(this);
         
-//        b = (Button) v.findViewById(R.id.showMenuSearch);
-//        b.setOnClickListener(this);
-		
+        b = (Button) v.findViewById(R.id.showMenuSearch);
+        b.setOnClickListener(this);		
         
 		return v;
 	}
@@ -79,9 +78,14 @@ public class MainMenuFragment extends Fragment implements OnClickListener {
 		case R.id.showMenuCarte:
 			showMenuCarte(v);
 			break;
-
 		case R.id.showMenuMenus:
 			showMenuMenus(v);
+			break;
+		case R.id.showMenuChildren:
+			showMenuChildren(v);
+			break;
+		case R.id.showMenuSearch:
+			showMenuSearch(v);
 			break;
 		default:
 			break;
@@ -117,11 +121,25 @@ public class MainMenuFragment extends Fragment implements OnClickListener {
 	}
 	
 	public void showMenuChildren(View v3){
+		Fragment ch = new ChildrenMenuFragment();
 		
+		FragmentTransaction trans = getFragmentManager().beginTransaction();
+		
+		trans.replace(R.id.content, ch);
+		trans.addToBackStack(null);
+
+		trans.commit();
 	}
 	
 	public void showMenuSearch(View v4){
+		Fragment search = new SearchFragment();
 		
+		FragmentTransaction trans = getFragmentManager().beginTransaction();
+		
+		trans.replace(R.id.content, search);
+		trans.addToBackStack(null);
+
+		trans.commit();
 	}
 	
 
