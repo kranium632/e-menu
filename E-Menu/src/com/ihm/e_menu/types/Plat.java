@@ -5,13 +5,14 @@ import java.util.Vector;
 public class Plat {
 	String name;
 	int id;
+	int type;
 	String description;
 	String img;
 	Vector<Aliment> aliments;
 	Vector<String> tags;
 	float prix;
 	
-	public Plat(String name, int id, String description, String img, Vector<Aliment> aliments, Vector<String> tags, float prix){
+	public Plat(String name, int id, int type, String description, String img, Vector<Aliment> aliments, Vector<String> tags, float prix){
 		this.name = name;
 		this.id = id;
 		this.description = description;
@@ -27,6 +28,10 @@ public class Plat {
 
 	public int getId() {
 		return id;
+	}
+
+	public int getType() {
+		return type;
 	}
 
 	public String getDescription() {
@@ -57,6 +62,10 @@ public class Plat {
 		this.id = id;
 	}
 
+	public void setType(int type) {
+		this.type = type;
+	}
+
 	public void setDescription(String description) {
 		this.description = description;
 	}
@@ -76,5 +85,4 @@ public class Plat {
 	public void setPrix(float prix) {
 		this.prix = prix;
 	}
-
 }
