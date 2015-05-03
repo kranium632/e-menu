@@ -14,35 +14,43 @@ import com.ihm.e_menu.sql.SQL_Access;
 import com.ihm.e_menu.types.CompleteList;
 import com.ihm.e_menu.types.GlobalBasket;
 
-public class MainMenuFragment extends Fragment implements OnClickListener {
+public class MainMenuFragment extends ContentFragment implements
+		OnClickListener {
+
+	public MainMenuFragment(NavigationActivity parent) {
+		super(parent, NavigationActivity.HOME);
+	}
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		//Initialisation du panier
+		// Initialisation du panier
 		GlobalBasket.init();
-		//Init de la BDD locale
+		// Init de la BDD locale
 		CompleteList.init(SQL_Access.getCompleteList());
 	}
 
 	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+		parent.nowIn(nav_pos);
 
-		View v = inflater.inflate(R.layout.activity_show_main_menu, container, false); 
+		View v = inflater.inflate(R.layout.activity_show_main_menu, container,
+				false);
 
 		Button b = (Button) v.findViewById(R.id.showMenuCarte);
-		
-        b.setOnClickListener(this);
-		
-        b = (Button) v.findViewById(R.id.showMenuChildren);
-        b.setOnClickListener(this);
-		
-        b = (Button) v.findViewById(R.id.showMenuMenus);
-        b.setOnClickListener(this);
-        
-        b = (Button) v.findViewById(R.id.showMenuSearch);
-        b.setOnClickListener(this);		
-        
+
+		b.setOnClickListener(this);
+
+		b = (Button) v.findViewById(R.id.showMenuChildren);
+		b.setOnClickListener(this);
+
+		b = (Button) v.findViewById(R.id.showMenuMenus);
+		b.setOnClickListener(this);
+
+		b = (Button) v.findViewById(R.id.showMenuSearch);
+		b.setOnClickListener(this);
+
 		return v;
 	}
 
@@ -68,58 +76,32 @@ public class MainMenuFragment extends Fragment implements OnClickListener {
 
 	}
 
-	public void showMenuCarte(View v1){
-		Fragment carte = new CarteFragment();
-
-		FragmentTransaction trans = getFragmentManager().beginTransaction();
-
-		trans.replace(R.id.content, carte);
-		trans.addToBackStack(null);
-
-		trans.commit();
+	public void showMenuCarte(View v1) {
+		ContentFragment carte = new CarteFragment(parent);
+		parent.goTo(carte);
 	}
 
-	public void showMenuMenus(View v2){
-		Fragment menu = new MenusFragment();
+	public void showMenuMenus(View v2) {
+		ContentFragment menu = new MenusFragment(parent);
 
 		Bundle bundle = new Bundle();
-		bundle.putInt(MenusFragment.START,0);
+		bundle.putInt(MenusFragment.START, 0);
 		menu.setArguments(bundle);
 
-		FragmentTransaction trans = getFragmentManager().beginTransaction();
-
-		trans.replace(R.id.content, menu);
-		trans.addToBackStack(null);
-
-		trans.commit();
+		parent.goTo(menu);
 
 	}
 
-	public void showMenuChildren(View v3){
-		Fragment ch = new ChildrenMenuFragment();
-		
-		FragmentTransaction trans = getFragmentManager().beginTransaction();
-		
-		trans.replace(R.id.content, ch);
-		trans.addToBackStack(null);
-
-		trans.commit();
+	public void showMenuChildren(View v3) {
+		ContentFragment ch = new ChildrenMenuFragment(parent);
+		parent.goTo(ch);
 
 	}
 
-	public void showMenuSearch(View v4){
-		Fragment search = new SearchFragment();
-		
-		FragmentTransaction trans = getFragmentManager().beginTransaction();
-		
-		trans.replace(R.id.content, search);
-		trans.addToBackStack(null);
-
-		trans.commit();
-
+	public void showMenuSearch(View v4) {
+		ContentFragment search = new SearchFragment(parent);
+		parent.goTo(search);
 	}
-
-
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
@@ -132,13 +114,10 @@ public class MainMenuFragment extends Fragment implements OnClickListener {
 			//
 			// http://developer.android.com/design/patterns/navigation.html#up-vs-back
 			//
-			//NavUtils.navigateUpFromSameTask(this);
+			// NavUtils.navigateUpFromSameTask(this);
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
 	}
-
-
-
 
 }

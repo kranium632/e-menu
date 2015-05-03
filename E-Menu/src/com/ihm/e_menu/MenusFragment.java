@@ -15,21 +15,25 @@ import com.ihm.e_menu.types.CompleteList;
 import com.ihm.e_menu.types.MenuA;
 
 
-public class MenusFragment extends Fragment {
+public class MenusFragment extends ContentFragment {
+
 	public static final String START = "start";
 	public static final String MENU_ID = "menuID";
 	private static final int[] buttonIDs = {R.id.menuMenusButton0, R.id.menuMenusButton1, R.id.menuMenusButton2, R.id.menuMenusButton3};
 	
-	
-	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
+	public MenusFragment(NavigationActivity parent) {
+		super(parent, NavigationActivity.MENUS);
+		
+		//Default args
+		Bundle def = new Bundle();
+		def.putInt(START,0);
+		setArguments(def);
 	}
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		
+		parent.nowIn(nav_pos);
 		/*
 		 * Cr�er X pages de menus, o� X = m.size()/4
 		 * Pour chaque menu contenus dans m, sur chaque page, charger 4 menus,

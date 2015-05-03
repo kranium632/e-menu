@@ -9,11 +9,16 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-public class CarteFragment extends Fragment implements OnClickListener {
+public class CarteFragment extends ContentFragment implements OnClickListener {
+
+	public CarteFragment(NavigationActivity parent) {
+		super(parent, NavigationActivity.CARTE);
+	}
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
+		parent.nowIn(nav_pos);
 		View v = inflater.inflate(R.layout.activity_menu_carte, container, false);
 		
 		Button b = (Button)v.findViewById(R.id.mealsButton);

@@ -3,18 +3,25 @@ package com.ihm.e_menu;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
-import android.view.Menu;
-import android.view.MenuItem;
 
 public class NavigationActivity extends FragmentActivity {
-
+	public static final String HOME = "HOME";
+	public static final String CARTE = "CARTE";
+	public static final String MENUS = "MENUS";
+	public static final String CHILDREN = "CHILDREN";
+	public static final String SEARCH = "SEARCH";
+	public static final String BASKET = "BASKET";
+	
+	
+	NavigationFragment nav;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_navigation);
 		
-		NavigationFragment nav = new NavigationFragment();
-		MainMenuFragment content = new MainMenuFragment();
+		nav = new NavigationFragment(this);
+		MainMenuFragment content = new MainMenuFragment(this);
 		BasketButtonFragment basket = new BasketButtonFragment();
 		
 		FragmentTransaction trans = getSupportFragmentManager().beginTransaction();
@@ -25,23 +32,22 @@ public class NavigationActivity extends FragmentActivity {
 		
 		trans.commit();
 	}
+	
+	public void goTo(ContentFragment content){
+		
+		FragmentTransaction trans = getSupportFragmentManager().beginTransaction();
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		//getMenuInflater().inflate(R.menu.navigation, menu);
-		return true;
+		trans.replace(R.id.content, content);
+		trans.addToBackStack(null);
+
+		trans.commit();
+
+	}
+	
+	public void nowIn(String position){
+		nav.nowIn(position);
 	}
 
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
-	}
+	
+	
 }
