@@ -2,30 +2,38 @@ package com.ihm.e_menu;
 
 import java.util.Vector;
 
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
+
 import com.ihm.e_menu.types.Boisson;
 import com.ihm.e_menu.types.CompleteList;
 import com.ihm.e_menu.types.GlobalBasket;
 import com.ihm.e_menu.types.MenuA;
-import android.os.Bundle;
-import android.app.Activity;
-import android.view.Menu;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 
-public class ShowMenusAsPopUp extends Activity {
+public class DetailedMenuFragment extends Fragment {
 	public MenuA m = null;
 
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
+	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_show_menus_as_pop_up);
+	}
 
-		Bundle extras = getIntent().getExtras();
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+
+		View v = inflater.inflate(R.layout.activity_show_menus_as_pop_up, container, false); 
+		
+		Bundle extras = getArguments();
 		int id = extras.getInt(MenusFragment.MENU_ID);
 
 		this.m = CompleteList.getMenus(id);
-		final TextView textViewToChange = (TextView)findViewById(R.id.tv);
+		final TextView textViewToChange = (TextView)v.findViewById(R.id.tv);
 		if (this.m != null){
 			String s = this.m.getName() + "\n" + this.m.getDescription() + "\n";
 			Vector<Boisson> b = this.m.getBoissons();
@@ -39,22 +47,17 @@ public class ShowMenusAsPopUp extends Activity {
 		}
 		else {
 			textViewToChange.setText("Une erreur est survenue, veuillez contacter le personnel du restaurant.");
-			final Button buttonToChange = (Button)findViewById(R.id.addToBasket);
+			final Button buttonToChange = (Button)v.findViewById(R.id.addToBasket);
 			buttonToChange.setVisibility(View.INVISIBLE);
 		}
-
+		
+		
+		return v;
 	}
-
+	
 	public void addToBasket(View v){
 		if (this.m != null)
 			GlobalBasket.addMenu(m);
-	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.show_menus_as_pop_up, menu);
-		return true;
 	}
 
 }

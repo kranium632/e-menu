@@ -53,7 +53,7 @@
             android:label="@string/title_activity_menu_desserts" >
         </activity>
         <activity
-            android:name="com.ihm.e_menu.ShowMenusAsPopUp"
+            android:name="com.ihm.e_menu.DetailedMenuFragment"
             android:label="@string/title_activity_show_menus_as_pop_up" >
         </activity>
     </application>
