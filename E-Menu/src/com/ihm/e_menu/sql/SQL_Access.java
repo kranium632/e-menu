@@ -121,6 +121,19 @@ public class SQL_Access {
 		return results;
 	}
 	
+
+	public static Vector<Plat> getDesserts(){
+		Vector<Plat> results = new Vector<Plat>();
+		results.add(Dummies.getDummyDessert());
+		return results;
+	}
+	
+	public static Vector<Plat> getDessert(int id[]){
+		Vector<Plat> results = new Vector<Plat>();
+		results.add(Dummies.getDummyDessert());
+		return results;	
+	}
+	
 	public static Vector<MenuA> getMenus(){
 		Vector<MenuA> results = new Vector<MenuA>();
 		results.add(Dummies.getDummyMenu());
