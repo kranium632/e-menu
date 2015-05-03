@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class MenuCarteFragment extends Fragment {
+public class CarteFragment extends Fragment {
 
 //	public void showCarteStarters(View v1) {
 //		Intent children = new Intent(this, MenuChildren.class);

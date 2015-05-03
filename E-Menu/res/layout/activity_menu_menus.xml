@@ -14,7 +14,7 @@
         android:layout_weight="0.5">
 
         <Button
-	        android:id="@+id/menuMenusButton1"
+	        android:id="@+id/menuMenusButton0"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_height="fill_parent"
             android:layout_weight="0.5"
@@ -22,7 +22,7 @@
             android:text="@string/menu_1" />
 
         <Button
-	        android:id="@+id/menuMenusButton2"
+	        android:id="@+id/menuMenusButton1"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_height="fill_parent"
             android:layout_weight="0.5"
@@ -37,7 +37,7 @@
         android:layout_weight="0.5">
 
         <Button
-	        android:id="@+id/menuMenusButton3"
+	        android:id="@+id/menuMenusButton2"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_height="fill_parent"
             android:layout_weight="0.5"
@@ -45,7 +45,7 @@
             android:text="@string/menu_3" />
 
         <Button
-	        android:id="@+id/menuMenusButton4"
+	        android:id="@+id/menuMenusButton3"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_height="fill_parent"
             android:layout_weight="0.5"

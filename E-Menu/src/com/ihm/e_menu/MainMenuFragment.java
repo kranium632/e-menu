@@ -62,9 +62,9 @@ public class MainMenuFragment extends Fragment implements OnClickListener {
 //        b = (Button) v.findViewById(R.id.showMenuChildren);
 //        b.setOnClickListener(this);
 //		
-//        b = (Button) v.findViewById(R.id.showMenuMenus);
-//        b.setOnClickListener(this);
-//        
+        b = (Button) v.findViewById(R.id.showMenuMenus);
+        b.setOnClickListener(this);
+        
 //        b = (Button) v.findViewById(R.id.showMenuSearch);
 //        b.setOnClickListener(this);
 		
@@ -80,6 +80,9 @@ public class MainMenuFragment extends Fragment implements OnClickListener {
 			showMenuCarte(v);
 			break;
 
+		case R.id.showMenuMenus:
+			showMenuMenus(v);
+			break;
 		default:
 			break;
 		}
@@ -87,7 +90,8 @@ public class MainMenuFragment extends Fragment implements OnClickListener {
 	}
 
 	public void showMenuCarte(View v1){
-		MenuCarteFragment carte = new MenuCarteFragment();
+		Fragment carte = new CarteFragment();
+		
 		FragmentTransaction trans = getFragmentManager().beginTransaction();
 		
 		trans.replace(R.id.content, carte);
@@ -97,6 +101,18 @@ public class MainMenuFragment extends Fragment implements OnClickListener {
 	}
 	
 	public void showMenuMenus(View v2){
+		Fragment menu = new MenusFragment();
+		
+		Bundle bundle = new Bundle();
+		bundle.putInt(MenusFragment.START,0);
+		menu.setArguments(bundle);
+		
+		FragmentTransaction trans = getFragmentManager().beginTransaction();
+		
+		trans.replace(R.id.content, menu);
+		trans.addToBackStack(null);
+
+		trans.commit();
 		
 	}
 	
@@ -108,13 +124,6 @@ public class MainMenuFragment extends Fragment implements OnClickListener {
 		
 	}
 	
-	public void showMenuDrinks(View v5){
-		
-	}
-	
-	public void showMenuWines(View v6){
-		
-	}
 
 
 	@Override

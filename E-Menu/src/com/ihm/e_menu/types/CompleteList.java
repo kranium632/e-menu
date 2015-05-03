@@ -20,4 +20,15 @@ public class CompleteList {
 	public static Vector<MenuA> getMenus(){
 		return CompleteList.basket.getMenus();
 	}
+	
+	public static MenuA getMenus(int id){
+		Vector<MenuA> ms = basket.getMenus();
+		int len = ms.size();
+		for (int i = 0; i < len; i++){
+			MenuA m = ms.get(i);
+			if (m.getId() == id)
+				return m;
+		}
+		return null;
+	}
 }

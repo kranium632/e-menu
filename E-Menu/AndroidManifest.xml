@@ -24,50 +24,37 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainMenuFragment"
-            android:label="@string/title_activity_show_main_menu" >
-
-            <!-- android:parentActivityName="com.ihm.e_menu" -->
-
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.ihm.e_menu" />
-        </activity>
-        <activity
             android:name=".NavigationActivity"
-            android:label="@string/title_activity_navigation" 
-            android:screenOrientation="landscape">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.ihm.e_menu" />
+            android:label="@string/title_activity_navigation"
+            android:screenOrientation="landscape" >
         </activity>
         <activity
-            android:name=".MenuCarteFragment"
-            android:label="@string/title_activity_menu_carte" >
-        </activity>
-        <activity
-            android:name=".MenuMenusFragment"
-            android:label="@string/title_activity_menu_menus" >
-        </activity>
-        <activity
-            android:name=".MenuChildren"
+            android:name="com.ihm.e_menu.MenuChildren"
             android:label="@string/title_activity_menu_children" >
         </activity>
         <activity
-            android:name=".MenuSearch"
+            android:name="com.ihm.e_menu.MenuSearch"
             android:label="@string/title_activity_menu_search" >
         </activity>
         <activity
-            android:name=".MenuWines"
+            android:name="com.ihm.e_menu.MenuWines"
             android:label="@string/title_activity_menu_wines" >
         </activity>
         <activity
-            android:name=".MenuDrinks"
+            android:name="com.ihm.e_menu.MenuDrinks"
             android:label="@string/title_activity_menu_drinks" >
         </activity>
         <activity
-            android:name=".Carte"
+            android:name="com.ihm.e_menu.Carte"
             android:label="@string/title_activity_carte" >
+        </activity>
+        <activity
+            android:name="com.ihm.e_menu.MenuDesserts"
+            android:label="@string/title_activity_menu_desserts" >
+        </activity>
+        <activity
+            android:name="com.ihm.e_menu.ShowMenusAsPopUp"
+            android:label="@string/title_activity_show_menus_as_pop_up" >
         </activity>
     </application>
 

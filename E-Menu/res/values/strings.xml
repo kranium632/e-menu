@@ -11,6 +11,14 @@
 
     <!--  -->
     <string name="title_activity_show_main_menu">Main Page</string>
+    <string name="title_activity_menu_carte">À la Carte</string>
+    <string name="title_activity_menu_menus">Liste des Menus</string>
+    <string name="title_activity_menu_children">Pour les Enfants</string>
+    <string name="title_activity_menu_search">Recherche/Filtre</string>
+    <string name="title_activity_menu_wines">Carte des Vins</string>
+    <string name="title_activity_menu_drinks">Carte des Boissons</string>
+    <string name="title_activity_menu_desserts">MenuDesserts</string>
+    <string name="title_activity_show_menus_as_pop_up">ShowMenusAsPopUp</string>
 
     <!--  -->
     <string name="main_menu_carte">À la Carte</string>
@@ -21,12 +29,6 @@
     <string name="main_menu_recherche">Recherche</string>
 
     <!--  -->
-    <string name="title_activity_menu_carte">À la Carte</string>
-    <string name="title_activity_menu_menus">Liste des Menus</string>
-    <string name="title_activity_menu_children">Pour les Enfants</string>
-    <string name="title_activity_menu_search">Recherche/Filtre</string>
-    <string name="title_activity_menu_wines">Carte des Vins</string>
-    <string name="title_activity_menu_drinks">Carte des Boissons</string>
 
     <!--  -->
     <string name="menu_carte">À la Carte</string>
@@ -34,6 +36,7 @@
     <string name="menu_drinks">Boissons</string>
     <string name="menu_wines">Carte des Vins</string>
     <string name="menu_children">Pour les Enfants</string>
+    <string name="menu_desserts">Desserts</string>
     <string name="menu_search">Recherche - Filtres</string>
 
     <!-- Carte -->
@@ -43,6 +46,9 @@
     <string name="carte_drinks">Boissons</string>
     <string name="carte_wines">Carte des Vins</string>
 
+    <!--  -->
+    <string name="addToBasket">Ajouter au Panier</string>
+    
     <!--  -->
     <string name="hello_world">Hello world!</string>
     <string name="welcome">Hello world!</string>
