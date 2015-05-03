@@ -49,9 +49,9 @@ public class DetailedMenuFragment extends Fragment implements OnClickListener {
 			}
 
 			textViewToChange.setText(s);
-		} else {
-			textViewToChange
-					.setText("Une erreur est survenue, veuillez contacter le personnel du restaurant.");
+		}
+		else {
+			textViewToChange.setText("Une erreur est survenue, veuillez contacter le personnel du restaurant.");
 			basket.setVisibility(View.INVISIBLE);
 		}
 

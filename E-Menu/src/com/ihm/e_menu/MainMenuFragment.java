@@ -15,66 +15,40 @@ import com.ihm.e_menu.types.CompleteList;
 import com.ihm.e_menu.types.GlobalBasket;
 
 public class MainMenuFragment extends Fragment implements OnClickListener {
-	
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		// Show the Up button in the action bar.
-		//setupActionBar();
 		//Initialisation du panier
 		GlobalBasket.init();
+		//Init de la BDD locale
 		CompleteList.init(SQL_Access.getCompleteList());
-
-		/*
-		final TextView textViewToChange = (TextView)findViewById(R.id.welcome);
-		Bundle extras = getIntent().getExtras();
-		String welcomeString = "default text", language;
-		
-		if (savedInstanceState == null){
-			extras = getIntent().getExtras();
-			if(extras == null) {
-				language = null;
-			}
-			else {
-				language = extras.getString(MainActivity.LANGUAGE);
-			}
-		}
-		else {
-			language = (String)savedInstanceState.getSerializable(MainActivity.LANGUAGE);
-		}
-		if (language.equals(MainActivity.EN_LANGUAGE))
-			welcomeString = "Welcome to our restaurant!";
-		else if (language.equals(MainActivity.FR_LANGUAGE))
-			welcomeString = "Bienvenue dans notre restaurant !";
-		textViewToChange.setText(welcomeString);
-		//*/
 	}
-	
+
 	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-			Bundle savedInstanceState) {
-		
+	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
 		View v = inflater.inflate(R.layout.activity_show_main_menu, container, false); 
-		
+
 		Button b = (Button) v.findViewById(R.id.showMenuCarte);
-        b.setOnClickListener(this);
-		
-//        b = (Button) v.findViewById(R.id.showMenuChildren);
-//        b.setOnClickListener(this);
-//		
-        b = (Button) v.findViewById(R.id.showMenuMenus);
-        b.setOnClickListener(this);
-        
-//        b = (Button) v.findViewById(R.id.showMenuSearch);
-//        b.setOnClickListener(this);
-		
-        
+		b.setOnClickListener(this);
+
+		//        b = (Button) v.findViewById(R.id.showMenuChildren);
+		//        b.setOnClickListener(this);
+		//		
+		b = (Button) v.findViewById(R.id.showMenuMenus);
+		b.setOnClickListener(this);
+
+		//        b = (Button) v.findViewById(R.id.showMenuSearch);
+		//        b.setOnClickListener(this);
+
+
 		return v;
 	}
-	
+
 	@Override
 	public void onClick(View v) {
-		
+
 		switch (v.getId()) {
 		case R.id.showMenuCarte:
 			showMenuCarte(v);
@@ -86,44 +60,44 @@ public class MainMenuFragment extends Fragment implements OnClickListener {
 		default:
 			break;
 		}
-		
+
 	}
 
 	public void showMenuCarte(View v1){
 		Fragment carte = new CarteFragment();
-		
+
 		FragmentTransaction trans = getFragmentManager().beginTransaction();
-		
+
 		trans.replace(R.id.content, carte);
 		trans.addToBackStack(null);
 
 		trans.commit();
 	}
-	
+
 	public void showMenuMenus(View v2){
 		Fragment menu = new MenusFragment();
-		
+
 		Bundle bundle = new Bundle();
 		bundle.putInt(MenusFragment.START,0);
 		menu.setArguments(bundle);
-		
+
 		FragmentTransaction trans = getFragmentManager().beginTransaction();
-		
+
 		trans.replace(R.id.content, menu);
 		trans.addToBackStack(null);
 
 		trans.commit();
-		
+
 	}
-	
+
 	public void showMenuChildren(View v3){
-		
+
 	}
-	
+
 	public void showMenuSearch(View v4){
-		
+
 	}
-	
+
 
 
 	@Override
@@ -142,8 +116,8 @@ public class MainMenuFragment extends Fragment implements OnClickListener {
 		}
 		return super.onOptionsItemSelected(item);
 	}
-	
-	
-	
+
+
+
 
 }
