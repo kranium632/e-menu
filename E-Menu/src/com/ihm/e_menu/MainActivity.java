@@ -26,13 +26,13 @@ public class MainActivity extends Activity {
 	}
 	
 	public void showMenuFR(View view){
-		Intent intent = new Intent(this, ShowMainMenu.class);
+		Intent intent = new Intent(this, NavigationActivity.class);
 		intent.putExtra(LANGUAGE, FR_LANGUAGE);
 		startActivity(intent);
 	}
 	
 	public void showMenuEN(View view){
-		Intent intent = new Intent(this, ShowMainMenu.class);
+		Intent intent = new Intent(this, MainMenuFragment.class);
 		intent.putExtra(LANGUAGE, EN_LANGUAGE);
 		startActivity(intent);
 	}

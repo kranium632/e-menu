@@ -1,22 +1,24 @@
 package com.ihm.e_menu;
 
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
+import android.view.LayoutInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.Button;
+
 import com.ihm.e_menu.sql.SQL_Access;
 import com.ihm.e_menu.types.CompleteList;
 import com.ihm.e_menu.types.GlobalBasket;
 
-import android.app.Activity;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-
-public class ShowMainMenu extends Activity {
+public class MainMenuFragment extends Fragment implements OnClickListener {
 	
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
+	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_show_main_menu);
 		// Show the Up button in the action bar.
 		//setupActionBar();
 		//Initialisation du panier
@@ -48,51 +50,72 @@ public class ShowMainMenu extends Activity {
 		//*/
 	}
 	
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+		
+		View v = inflater.inflate(R.layout.activity_show_main_menu, container, false); 
+		
+		Button b = (Button) v.findViewById(R.id.showMenuCarte);
+        b.setOnClickListener(this);
+		
+//        b = (Button) v.findViewById(R.id.showMenuChildren);
+//        b.setOnClickListener(this);
+//		
+//        b = (Button) v.findViewById(R.id.showMenuMenus);
+//        b.setOnClickListener(this);
+//        
+//        b = (Button) v.findViewById(R.id.showMenuSearch);
+//        b.setOnClickListener(this);
+		
+        
+		return v;
+	}
+	
+	@Override
+	public void onClick(View v) {
+		
+		switch (v.getId()) {
+		case R.id.showMenuCarte:
+			showMenuCarte(v);
+			break;
+
+		default:
+			break;
+		}
+		
+	}
+
 	public void showMenuCarte(View v1){
-		Intent carte = new Intent(this, MenuCarte.class);
-		startActivity(carte);
+		MenuCarteFragment carte = new MenuCarteFragment();
+		FragmentTransaction trans = getFragmentManager().beginTransaction();
+		
+		trans.replace(R.id.content, carte);
+		trans.addToBackStack(null);
+
+		trans.commit();
 	}
 	
 	public void showMenuMenus(View v2){
-		Intent menus = new Intent(this, MenuMenus.class);
-		startActivity(menus);
+		
 	}
 	
 	public void showMenuChildren(View v3){
-		Intent children = new Intent(this, MenuChildren.class);
-		startActivity(children);
+		
 	}
 	
 	public void showMenuSearch(View v4){
-		Intent search = new Intent(this, MenuSearch.class);
-		startActivity(search);
+		
 	}
 	
 	public void showMenuDrinks(View v5){
-		Intent search = new Intent(this, MenuDrinks.class);
-		startActivity(search);
+		
 	}
 	
 	public void showMenuWines(View v6){
-		Intent search = new Intent(this, MenuWines.class);
-		startActivity(search);
+		
 	}
 
-	/**
-	 * Set up the {@link android.app.ActionBar}.
-	 */
-	private void setupActionBar() {
-
-		getActionBar().setDisplayHomeAsUpEnabled(true);
-
-	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		//getMenuInflater().inflate(R.menu.show_main_menu, menu);
-		return true;
-	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {

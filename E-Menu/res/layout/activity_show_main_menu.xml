@@ -11,38 +11,19 @@
         android:id="@+id/mainMenuTableRow1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="0.5">
+        android:layout_weight="0.5" >
 
         <Button
+            android:id="@+id/showMenuCarte"
             android:layout_height="fill_parent"
             android:layout_weight="0.5"
-            android:onClick="showMenuCarte"
             android:text="@string/main_menu_carte" />
 
         <Button
+            android:id="@+id/showMenuMenus"
             android:layout_height="fill_parent"
             android:layout_weight="0.5"
-            android:onClick="showMenuMenus"
             android:text="@string/main_menu_menus" />
-    </TableRow>
-
-    <TableRow
-        android:id="@+id/mainMenuTableRow2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="0.5">
-
-        <Button
-            android:layout_height="fill_parent"
-            android:layout_weight="0.5"
-            android:onClick="showMenuDrinks"
-            android:text="@string/main_menu_drinks" />
-
-        <Button
-            android:layout_height="fill_parent"
-            android:layout_weight="0.5"
-            android:onClick="showMenuWines"
-            android:text="@string/main_menu_wines" />
     </TableRow>
 
     <TableRow
@@ -52,15 +33,15 @@
         android:layout_weight="0.5" >
 
         <Button
+            android:id="@+id/showMenuChildren"
             android:layout_height="fill_parent"
             android:layout_weight="0.5"
-            android:onClick="showMenuChildren"
             android:text="@string/main_menu_enfants" />
 
         <Button
+            android:id="@+id/showMenuSearch"
             android:layout_height="fill_parent"
             android:layout_weight="0.5"
-            android:onClick="showMenuSearch"
             android:text="@string/main_menu_recherche" />
     </TableRow>
 

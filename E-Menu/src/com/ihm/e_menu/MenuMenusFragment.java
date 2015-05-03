@@ -11,7 +11,7 @@ import android.app.Activity;
 import android.view.Menu;
 import android.widget.Button;
 
-public class MenuMenus extends Activity {
+public class MenuMenusFragment extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

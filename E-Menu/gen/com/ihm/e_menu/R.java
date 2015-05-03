@@ -32,18 +32,23 @@ public final class R {
         public static final int ic_launcher=0x7f020002;
     }
     public static final class id {
-        public static final int action_settings=0x7f08000b;
+        public static final int action_settings=0x7f080010;
         public static final int carteMenuLinearLayout=0x7f080000;
+        public static final int content=0x7f08000a;
         public static final int mainMenuTableLayout1=0x7f080002;
         public static final int mainMenuTableRow1=0x7f080003;
         public static final int mainMenuTableRow2=0x7f080004;
-        public static final int mainMenuTableRow3=0x7f08000a;
+        public static final int mainMenuTableRow3=0x7f08000d;
         public static final int menuMenusButton1=0x7f080006;
         public static final int menuMenusButton2=0x7f080007;
         public static final int menuMenusButton3=0x7f080008;
         public static final int menuMenusButton4=0x7f080009;
         public static final int menuMenusTableLayout=0x7f080005;
         public static final int navigation=0x7f080001;
+        public static final int showMenuCarte=0x7f08000b;
+        public static final int showMenuChildren=0x7f08000e;
+        public static final int showMenuMenus=0x7f08000c;
+        public static final int showMenuSearch=0x7f08000f;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -55,8 +60,9 @@ public final class R {
         public static final int activity_menu_search=0x7f030006;
         public static final int activity_menu_starters=0x7f030007;
         public static final int activity_menu_wines=0x7f030008;
-        public static final int activity_show_main_menu=0x7f030009;
-        public static final int navigation_item=0x7f03000a;
+        public static final int activity_navigation=0x7f030009;
+        public static final int activity_show_main_menu=0x7f03000a;
+        public static final int navigation_item=0x7f03000b;
     }
     public static final class menu {
         public static final int global=0x7f070000;
@@ -69,7 +75,8 @@ public final class R {
         public static final int menu_search=0x7f070007;
         public static final int menu_starters=0x7f070008;
         public static final int menu_wines=0x7f070009;
-        public static final int show_main_menu=0x7f07000a;
+        public static final int navigation=0x7f07000a;
+        public static final int show_main_menu=0x7f07000b;
     }
     public static final class string {
         public static final int action_example=0x7f050029;
