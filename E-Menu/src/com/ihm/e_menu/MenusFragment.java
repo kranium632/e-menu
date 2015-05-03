@@ -64,8 +64,8 @@ public class MenusFragment extends Fragment {
 				buttonToMod.setVisibility(View.INVISIBLE);
 			}
 			else {
-				buttonToMod.setText(menus.get(nbr).getName());
-				buttonToMod.setTag(nbr);
+				buttonToMod.setText(menus.get(nbr).getName() + "\n" + menus.get(nbr).getPrix() + " €");
+				buttonToMod.setTag(menus.get(nbr).getId());
 				buttonToMod.setOnClickListener(onButtonClicked);
 			}
 		}

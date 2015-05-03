@@ -124,12 +124,14 @@ public class SQL_Access {
 	public static Vector<MenuA> getMenus(){
 		Vector<MenuA> results = new Vector<MenuA>();
 		results.add(Dummies.getDummyMenu());
+		results.add(Dummies.getDummyMenu2());
 		return results;
 	}
 	
 	public static Vector<MenuA> getMenu(int id[]){
 		Vector<MenuA> results = new Vector<MenuA>();
 		results.add(Dummies.getDummyMenu());
+		results.add(Dummies.getDummyMenu2());
 		return results;	
 	}
 	
