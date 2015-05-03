@@ -35,14 +35,14 @@ public final class R {
         public static final int action_settings=0x7f08001b;
         public static final int addToBasket=0x7f080013;
         public static final int basket=0x7f08001a;
-        public static final int buttonBasket=0x7f08000c;
+        public static final int basketButton=0x7f080014;
+        public static final int buttonBasketFrame=0x7f08000c;
         public static final int carte=0x7f080016;
         public static final int carteMenuLinearLayout=0x7f080000;
         public static final int children=0x7f080018;
         public static final int content=0x7f08000b;
         public static final int frame=0x7f08000a;
         public static final int home=0x7f080015;
-        public static final int lonelyBasketButton=0x7f080014;
         public static final int mainMenuTableLayout1=0x7f080002;
         public static final int mainMenuTableRow1=0x7f080003;
         public static final int mainMenuTableRow2=0x7f080004;

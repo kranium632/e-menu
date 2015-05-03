@@ -14,7 +14,7 @@ public class BasketButtonFragment extends Fragment implements OnClickListener {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View v = inflater.inflate(R.layout.basket_button, container, false);
-		Button b = (Button) v.findViewById(R.id.lonelyBasketButton);
+		Button b = (Button) v.findViewById(R.id.basketButton);
 		b.setOnClickListener(this);
 		return v;
 	}
@@ -22,7 +22,7 @@ public class BasketButtonFragment extends Fragment implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-		case R.id.lonelyBasketButton:
+		case R.id.basketButton:
 			showBasket(v);
 			break;
 		default:

@@ -19,7 +19,7 @@ public class NavigationActivity extends FragmentActivity {
 		
 		FragmentTransaction trans = getSupportFragmentManager().beginTransaction();
 		
-		trans.add(R.id.buttonBasket, basket);
+		trans.add(R.id.buttonBasketFrame, basket);
 		trans.add(R.id.navigation, nav);
 		trans.add(R.id.content, content);
 		
