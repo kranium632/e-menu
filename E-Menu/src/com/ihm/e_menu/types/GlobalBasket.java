@@ -21,6 +21,10 @@ public class GlobalBasket {
 		GlobalBasket.basket.addBoisson(b);
 	}
 	
+	public static void clearBasket(){
+		GlobalBasket.basket.clearBasket();
+	}
+	
 	public static void removePlat(Plat p){
 		GlobalBasket.basket.removePlat(p);
 	}

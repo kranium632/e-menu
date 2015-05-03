@@ -22,6 +22,7 @@ public class ChildrenMenuFragment extends ContentFragment {
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+		parentActivity.nowIn(position);
 		View v = inflater.inflate(R.layout.carte_template_layout, container, false);
 		Vector<MenuA> menus = CompleteList.getMenus();
 
@@ -47,7 +48,7 @@ public class ChildrenMenuFragment extends ContentFragment {
 				MenuA m = menus.get(i);
 				if (m.getType() == SQL_Access.MENU_ENFANT){
 					tv = new TextView(v.getContext());
-					tv.setText(m.getName() + " - " + m.getPrix() + "€");
+					tv.setText(m.getName() + " - " + m.getPrix() + "ï¿½");
 					basketLayout.addView(tv);
 				}
 			}

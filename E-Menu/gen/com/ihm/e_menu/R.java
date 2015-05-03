@@ -42,6 +42,7 @@ public final class R {
         public static final int content=0x7f080010;
         public static final int dessertsButton=0x7f080007;
         public static final int drinksButton=0x7f080008;
+        public static final int emptyBasket=0x7f08001a;
         public static final int frame=0x7f08000f;
         public static final int mainMenuTableLayout1=0x7f080002;
         public static final int mainMenuTableRow1=0x7f080003;
@@ -66,7 +67,6 @@ public final class R {
         public static final int showMenuSearch=0x7f080015;
         public static final int startersButton=0x7f080004;
         public static final int tv=0x7f080016;
-        public static final int tvBasket=0x7f08001a;
         public static final int tvCarte=0x7f08001c;
     }
     public static final class layout {
@@ -126,6 +126,7 @@ public final class R {
          */
         public static final int carte_starters=0x7f05001e;
         public static final int carte_wines=0x7f050022;
+        public static final int emptyBasket=0x7f05002f;
         /**   
          */
         public static final int hello_world=0x7f050024;

@@ -2,21 +2,23 @@ package com.ihm.e_menu;
 
 import java.util.Vector;
 
+import android.annotation.SuppressLint;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
 import com.ihm.e_menu.types.Boisson;
 import com.ihm.e_menu.types.GlobalBasket;
 import com.ihm.e_menu.types.MenuA;
 import com.ihm.e_menu.types.Plat;
 
-import android.annotation.SuppressLint;
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-
 @SuppressLint("ValidFragment")
-public class BasketFragment extends ContentFragment {
+public class BasketFragment extends ContentFragment implements OnClickListener{
 
 	@SuppressLint("ValidFragment")
 	public BasketFragment(NavigationActivity parent) {
@@ -28,6 +30,10 @@ public class BasketFragment extends ContentFragment {
 			Bundle savedInstanceState) {
 		parentActivity.nowIn(position);
 		View v = inflater.inflate(R.layout.basket_fragment, container, false);
+		
+		Button empty = (Button)v.findViewById(R.id.emptyBasket);
+		empty.setOnClickListener(this);
+		
 		Vector<Plat> meals = GlobalBasket.getMeals();
 		Vector<MenuA> menus = GlobalBasket.getMenus();
 		Vector<Boisson> drinks = GlobalBasket.getDrinks();
@@ -101,6 +107,28 @@ public class BasketFragment extends ContentFragment {
 			}
 		}
 		return v;
+	}
+
+	@Override
+	public void onClick(View v) {
+		switch (v.getId()) {
+		case R.id.emptyBasket:
+			emptyBasket();
+			break;
+
+		default:
+			break;
+		}
+		
+	}
+
+	private void emptyBasket() {
+		GlobalBasket.clearBasket();
+		LinearLayout layout = (LinearLayout)getView().findViewById(R.id.basketLayout);
+		layout.removeAllViews();
+		TextView tv = new TextView(getView().getContext());
+		tv.setText("Le panier est actuellement vide.");
+		layout.addView(tv);
 	}
 
 }
