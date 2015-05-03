@@ -27,18 +27,19 @@ public class ShowMenusAsPopUp extends Activity {
 		this.m = CompleteList.getMenus(id);
 		final TextView textViewToChange = (TextView)findViewById(R.id.tv);
 		if (this.m != null){
-			String s = this.m.getName() + "\n" + this.m.getDescription() + "\n";
+			String s = this.m.getDescription() + "\n";
 			Vector<Boisson> b = this.m.getBoissons();
 			if (b.size() > 0)
 				s += "Liste des boissons comprise dans le menu :\n";
 			for (int i = 0; i < b.size(); i++){
 				s += "- " + b.get(i).getName() + "\n";
 			}
-
+			setTitle(m.getName());
 			textViewToChange.setText(s);
 		}
 		else {
 			textViewToChange.setText("Une erreur est survenue, veuillez contacter le personnel du restaurant.");
+			setTitle("Une erreur est survenue.");
 			final Button buttonToChange = (Button)findViewById(R.id.addToBasket);
 			buttonToChange.setVisibility(View.INVISIBLE);
 		}
