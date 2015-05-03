@@ -2,9 +2,9 @@ package com.ihm.e_menu;
 
 import java.util.Vector;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -15,12 +15,14 @@ import com.ihm.e_menu.types.CompleteList;
 import com.ihm.e_menu.types.MenuA;
 
 
+@SuppressLint("ValidFragment")
 public class MenusFragment extends ContentFragment {
 
 	public static final String START = "start";
 	public static final String MENU_ID = "menuID";
 	private static final int[] buttonIDs = {R.id.menuMenusButton0, R.id.menuMenusButton1, R.id.menuMenusButton2, R.id.menuMenusButton3};
 	
+	@SuppressLint("ValidFragment")
 	public MenusFragment(NavigationActivity parent) {
 		super(parent, NavigationActivity.MENUS);
 		
@@ -68,7 +70,7 @@ public class MenusFragment extends ContentFragment {
 				buttonToMod.setVisibility(View.INVISIBLE);
 			}
 			else {
-				buttonToMod.setText(menus.get(nbr).getName() + "\n" + menus.get(nbr).getPrix() + " ï¿½");
+				buttonToMod.setText(menus.get(nbr).getName() + "\n" + menus.get(nbr).getPrix() + "€");
 				buttonToMod.setTag(menus.get(nbr).getId());
 				buttonToMod.setOnClickListener(onButtonClicked);
 			}

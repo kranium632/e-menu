@@ -15,6 +15,7 @@ public class Plat {
 	public Plat(String name, int id, int type, String description, String img, Vector<Aliment> aliments, Vector<String> tags, float prix){
 		this.name = name;
 		this.id = id;
+		this.type = type;
 		this.description = description;
 		this.img = img;
 		this.aliments = aliments;

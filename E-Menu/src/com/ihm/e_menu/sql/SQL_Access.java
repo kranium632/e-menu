@@ -11,6 +11,16 @@ import com.ihm.e_menu.types.MenuA;
 import com.ihm.e_menu.types.Plat;
 
 public class SQL_Access {
+	public static int ALIMENT_AUTRE = 0;
+	public static int ALIMENT_VIN = 1;
+	public static int ALIMENT_BOISSON = 2;
+	public static int ALIMENT_ENTREE = 3;
+	public static int ALIMENT_PLAT = 4;
+	public static int ALIMENT_DESSERT = 5;
+	public static int PLAT_AUTRE = 0;
+	public static int PLAT_ENTREE = 1;
+	public static int PLAT_PLAT = 2;
+	public static int PLAT_DESSERT = 3;
 	
 	/**
 	 * Returns all the Aliment objects stored in the data base, including wines and drinks
@@ -124,6 +134,8 @@ public class SQL_Access {
 	public static Vector<Plat> getPlats(){
 		Vector<Plat> results = new Vector<Plat>();
 		results.add(Dummies.getDummyPlat());
+		results.add(Dummies.getDummyEntree());
+		results.add(Dummies.getDummyDessert());
 		return results;
 	}
 	
@@ -131,6 +143,8 @@ public class SQL_Access {
 	public static Vector<Plat> getPlat(int id[]){
 		Vector<Plat> results = new Vector<Plat>();
 		results.add(Dummies.getDummyPlat());
+		results.add(Dummies.getDummyEntree());
+		results.add(Dummies.getDummyDessert());
 		return results;
 	}
 	

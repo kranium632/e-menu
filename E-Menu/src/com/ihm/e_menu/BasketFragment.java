@@ -7,16 +7,18 @@ import com.ihm.e_menu.types.GlobalBasket;
 import com.ihm.e_menu.types.MenuA;
 import com.ihm.e_menu.types.Plat;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+@SuppressLint("ValidFragment")
 public class BasketFragment extends ContentFragment {
 
+	@SuppressLint("ValidFragment")
 	public BasketFragment(NavigationActivity parent) {
 		super(parent, NavigationActivity.BASKET);
 	}
@@ -33,7 +35,7 @@ public class BasketFragment extends ContentFragment {
 
 		//On affiche d'abord les menus, ensuite les plats et enfin les boissons
 		LinearLayout basketLayout = (LinearLayout) v.findViewById(R.id.basketLayout);
-		TextView tv = (TextView)v.findViewById(R.id.tvBasket);
+		TextView tv;
 		basketLayout.removeAllViews();
 		int len = menus.size();
 		if ((menus.size() == 0) && (drinks.size() == 0) && (meals.size() == 0)){
