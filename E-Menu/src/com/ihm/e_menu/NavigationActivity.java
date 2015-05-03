@@ -15,7 +15,7 @@ public class NavigationActivity extends FragmentActivity {
 		
 		NavigationFragment nav = new NavigationFragment();
 		MainMenuFragment content = new MainMenuFragment();
-		BasketFragment basket = new BasketFragment();
+		BasketButtonFragment basket = new BasketButtonFragment();
 		
 		FragmentTransaction trans = getSupportFragmentManager().beginTransaction();
 		
