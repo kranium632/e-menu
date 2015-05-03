@@ -108,6 +108,19 @@ public class SQL_Access {
 		return results;
 	}
 	
+	public static Vector<Plat> getEntrees(){
+		Vector<Plat> results = new Vector<Plat>();
+		results.add(Dummies.getDummyEntree());
+		return results;
+	}
+	
+	
+	public static Vector<Plat> getEntree(int id[]){
+		Vector<Plat> results = new Vector<Plat>();
+		results.add(Dummies.getDummyEntree());
+		return results;
+	}
+	
 	public static Vector<Plat> getPlats(){
 		Vector<Plat> results = new Vector<Plat>();
 		results.add(Dummies.getDummyPlat());
@@ -138,6 +151,7 @@ public class SQL_Access {
 		Vector<MenuA> results = new Vector<MenuA>();
 		results.add(Dummies.getDummyMenu());
 		results.add(Dummies.getDummyMenu2());
+		results.add(Dummies.getDummyMenu3());
 		return results;
 	}
 	
@@ -145,6 +159,7 @@ public class SQL_Access {
 		Vector<MenuA> results = new Vector<MenuA>();
 		results.add(Dummies.getDummyMenu());
 		results.add(Dummies.getDummyMenu2());
+		results.add(Dummies.getDummyMenu3());
 		return results;	
 	}
 	
