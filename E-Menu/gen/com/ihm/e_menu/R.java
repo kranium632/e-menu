@@ -32,19 +32,20 @@ public final class R {
         public static final int ic_launcher=0x7f020002;
     }
     public static final class id {
-        public static final int action_settings=0x7f08001f;
+        public static final int action_settings=0x7f080021;
         public static final int addToBasket=0x7f080017;
-        public static final int basket=0x7f08001e;
+        public static final int basket=0x7f080020;
         public static final int basketButton=0x7f080018;
+        public static final int basketLayout=0x7f080019;
         public static final int buttonBasketFrame=0x7f080010;
-        public static final int carte=0x7f08001a;
+        public static final int carte=0x7f08001c;
         public static final int carteMenuLinearLayout=0x7f080000;
-        public static final int children=0x7f08001c;
+        public static final int children=0x7f08001e;
         public static final int content=0x7f08000f;
         public static final int dessertsButton=0x7f080007;
         public static final int drinksButton=0x7f080008;
         public static final int frame=0x7f08000e;
-        public static final int home=0x7f080019;
+        public static final int home=0x7f08001b;
         public static final int mainMenuTableLayout1=0x7f080002;
         public static final int mainMenuTableRow1=0x7f080003;
         public static final int mainMenuTableRow2=0x7f080006;
@@ -55,15 +56,16 @@ public final class R {
         public static final int menuMenusButton2=0x7f08000c;
         public static final int menuMenusButton3=0x7f08000d;
         public static final int menuMenusTableLayout=0x7f080009;
-        public static final int menus=0x7f08001b;
+        public static final int menus=0x7f08001d;
         public static final int navigation=0x7f080001;
-        public static final int search=0x7f08001d;
+        public static final int search=0x7f08001f;
         public static final int showMenuCarte=0x7f080011;
         public static final int showMenuChildren=0x7f080014;
         public static final int showMenuMenus=0x7f080012;
         public static final int showMenuSearch=0x7f080015;
         public static final int startersButton=0x7f080004;
         public static final int tv=0x7f080016;
+        public static final int tvBasket=0x7f08001a;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
