@@ -25,7 +25,14 @@ public class MealsFragment extends Fragment {
 		TextView tv;
 		basketLayout.removeAllViews();
 		int len = meals.size();
-		if (len == 0){
+		boolean empty = true;
+		for (int i = 0; i < len; i++){
+			if (meals.get(i).getType() == SQL_Access.PLAT_PLAT){
+				empty = false;
+				break;
+			}
+		}
+		if (empty){
 			tv = new TextView(v.getContext());
 			tv.setText("La carte ne contient actuellement aucun plat.\nVeuillez nous en excuser.");
 			basketLayout.addView(tv);

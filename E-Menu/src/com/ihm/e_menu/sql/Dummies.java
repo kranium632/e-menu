@@ -18,6 +18,8 @@ public class Dummies {
 	public static int PLAT_ENTREE = 1;
 	public static int PLAT_PLAT = 2;
 	public static int PLAT_DESSERT = 3;
+	public static int MENU_ADULTE = 0;
+	public static int MENU_ENFANT = 1;
 
 	public static final Aliment getDummyAlimentViande(){
 		Vector<String> tags = new Vector<String>();
@@ -119,7 +121,7 @@ public class Dummies {
 		Vector<Boisson> boissons = new Vector<Boisson>();
 		boissons.add(getDummyWine());
 		
-		return new MenuA("Côte de Boeuf #1", 0, description, "link:none", plat, boissons, tags, (float)10.0);
+		return new MenuA("Côte de Boeuf #1", 0, MENU_ADULTE, description, "link:none", plat, boissons, tags, (float)10.0);
 	}
 	
 	public static final MenuA getDummyMenu2(){
@@ -138,7 +140,7 @@ public class Dummies {
 		Vector<Boisson> boissons = new Vector<Boisson>();
 		boissons.add(getDummyWine());
 		
-		return new MenuA("Côte de Boeuf #2", 1, description, "link:none", plat, boissons, tags, (float)12.0);
+		return new MenuA("Côte de Boeuf #2", 1, MENU_ADULTE, description, "link:none", plat, boissons, tags, (float)12.0);
 	}
 	
 	public static final MenuA getDummyMenu3(){
@@ -157,7 +159,7 @@ public class Dummies {
 		Vector<Boisson> boissons = new Vector<Boisson>();
 		boissons.add(getDummyWine());
 		
-		return new MenuA("Côte de Boeuf #3", 2, description, "link:none", plat, boissons, tags, (float)11.0);
+		return new MenuA("Côte de Boeuf #3", 2, MENU_ADULTE, description, "link:none", plat, boissons, tags, (float)11.0);
 	}
 	
 	public static final Plat getDummyDessert(){

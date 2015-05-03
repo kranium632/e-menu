@@ -25,7 +25,14 @@ public class DrinksFragment extends Fragment {
 		TextView tv;
 		basketLayout.removeAllViews();
 		int len = drinks.size();
-		if (len == 0){
+		boolean empty = true;
+		for (int i = 0; i < len; i++){
+			if ((drinks.get(i).getType() == SQL_Access.ALIMENT_BOISSON) || (drinks.get(i).getType() == SQL_Access.ALIMENT_VIN)){
+				empty = false;
+				break;
+			}
+		}
+		if (empty){
 			tv = new TextView(v.getContext());
 			tv.setText("La carte ne contient actuellement aucune boisson.\nVeuillez nous en excuser.");
 			basketLayout.addView(tv);
@@ -34,6 +41,14 @@ public class DrinksFragment extends Fragment {
 			for (int i = 0; i < len; i++){
 				Boisson p = drinks.get(i);
 				if (p.getType() == SQL_Access.ALIMENT_BOISSON){
+					tv = new TextView(v.getContext());
+					tv.setText(p.getName() + " - " + p.getPrix() + "€");
+					basketLayout.addView(tv);
+				}
+			}
+			for (int i = 0; i < len; i++){
+				Boisson p = drinks.get(i);
+				if (p.getType() == SQL_Access.ALIMENT_VIN){
 					tv = new TextView(v.getContext());
 					tv.setText(p.getName() + " - " + p.getPrix() + "€");
 					basketLayout.addView(tv);

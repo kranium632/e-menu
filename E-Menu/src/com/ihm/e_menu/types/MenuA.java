@@ -5,6 +5,7 @@ import java.util.Vector;
 public class MenuA {
 	String name;
 	int id;
+	int type;
 	String description;
 	String img;
 	Vector<Plat> plats;
@@ -12,16 +13,25 @@ public class MenuA {
 	Vector<String> tags;
 	float prix;
 	
-	public MenuA(String name, int id, String description, String img, Vector<Plat> plats, Vector<Boisson> boissons,
+	public MenuA(String name, int id, int type, String description, String img, Vector<Plat> plats, Vector<Boisson> boissons,
 			Vector<String> tags, float prix){
 		this.name = name;
 		this.id = id;
+		this.type = type;
 		this.description = description;
 		this.img = img;
 		this.plats = plats;
 		this.boissons = boissons;
 		this.tags = tags;
 		this.prix = prix;
+	}
+
+	public int getType() {
+		return type;
+	}
+
+	public void setType(int type) {
+		this.type = type;
 	}
 
 	public String getName() {

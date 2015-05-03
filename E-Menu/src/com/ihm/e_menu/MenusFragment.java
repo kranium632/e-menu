@@ -11,6 +11,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.ihm.e_menu.sql.SQL_Access;
 import com.ihm.e_menu.types.CompleteList;
 import com.ihm.e_menu.types.MenuA;
 
@@ -21,17 +22,17 @@ public class MenusFragment extends ContentFragment {
 	public static final String START = "start";
 	public static final String MENU_ID = "menuID";
 	private static final int[] buttonIDs = {R.id.menuMenusButton0, R.id.menuMenusButton1, R.id.menuMenusButton2, R.id.menuMenusButton3};
-	
+
 	@SuppressLint("ValidFragment")
 	public MenusFragment(NavigationActivity parent) {
 		super(parent, NavigationActivity.MENUS);
-		
+
 		//Default args
 		Bundle def = new Bundle();
 		def.putInt(START,0);
 		setArguments(def);
 	}
-	
+
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
@@ -51,10 +52,10 @@ public class MenusFragment extends ContentFragment {
 
 		Bundle bundle = getArguments();
 		int start = bundle.getInt(MenusFragment.START);
-		
+
 
 		Vector<MenuA> menus = CompleteList.getMenus();
-		
+
 		View v = inflater.inflate(R.layout.activity_menu_menus,container,false);
 		/*
 		menus.get(0).getId();
@@ -62,7 +63,7 @@ public class MenusFragment extends ContentFragment {
 		final Button buttonToChange = (Button)findViewById(R.id.menuMenusButton0);
 		buttonToChange.setText(s);
 		buttonToChange.setTag(0);
-		*/
+		 */
 		for (int i = 0; i < 4; i++){
 			final Button buttonToMod = (Button)v.findViewById(buttonIDs[i]);
 			int nbr = start + i;
@@ -70,37 +71,39 @@ public class MenusFragment extends ContentFragment {
 				buttonToMod.setVisibility(View.INVISIBLE);
 			}
 			else {
-				buttonToMod.setText(menus.get(nbr).getName() + "\n" + menus.get(nbr).getPrix() + "€");
-				buttonToMod.setTag(menus.get(nbr).getId());
-				buttonToMod.setOnClickListener(onButtonClicked);
+				if (menus.get(nbr).getType() == SQL_Access.MENU_ADULTE){
+					buttonToMod.setText(menus.get(nbr).getName() + "\n" + menus.get(nbr).getPrix() + "€");
+					buttonToMod.setTag(menus.get(nbr).getId());
+					buttonToMod.setOnClickListener(onButtonClicked);
+				}
 			}
 		}
-		
+
 		return v;
 	}
 
-	
+
 	public void showPopUp(int id){
 		DialogFragment menu = new DetailedMenuFragment();
-		
+
 		Bundle bundle = new Bundle();
 		bundle.putInt(MENU_ID, id);
 		menu.setArguments(bundle);
-		
+
 		menu.show(getFragmentManager(), "menu");
-		
-//		FragmentTransaction trans = getFragmentManager().beginTransaction();
-//		
-//		trans.replace(R.id.content, menu);
-//		trans.addToBackStack(null);
-//		
-//		trans.commit();
+
+		//		FragmentTransaction trans = getFragmentManager().beginTransaction();
+		//		
+		//		trans.replace(R.id.content, menu);
+		//		trans.addToBackStack(null);
+		//		
+		//		trans.commit();
 	}
-	
+
 	private OnClickListener onButtonClicked = new OnClickListener() {
-	     public void onClick(final View v) {
-	         int id = (Integer)v.getTag();
-	    	 showPopUp(id);
-	   }
+		public void onClick(final View v) {
+			int id = (Integer)v.getTag();
+			showPopUp(id);
+		}
 	};
 }

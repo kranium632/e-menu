@@ -21,6 +21,8 @@ public class SQL_Access {
 	public static int PLAT_ENTREE = 1;
 	public static int PLAT_PLAT = 2;
 	public static int PLAT_DESSERT = 3;
+	public static int MENU_ADULTE = 0;
+	public static int MENU_ENFANT = 1;
 	
 	/**
 	 * Returns all the Aliment objects stored in the data base, including wines and drinks
