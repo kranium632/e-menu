@@ -32,10 +32,14 @@ public final class R {
         public static final int ic_launcher=0x7f020002;
     }
     public static final class id {
-        public static final int action_settings=0x7f080012;
+        public static final int action_settings=0x7f080018;
         public static final int addToBasket=0x7f080011;
+        public static final int basket=0x7f080017;
+        public static final int carte=0x7f080013;
         public static final int carteMenuLinearLayout=0x7f080000;
+        public static final int children=0x7f080015;
         public static final int content=0x7f08000a;
+        public static final int home=0x7f080012;
         public static final int mainMenuTableLayout1=0x7f080002;
         public static final int mainMenuTableRow1=0x7f080003;
         public static final int mainMenuTableRow2=0x7f080004;
@@ -45,7 +49,9 @@ public final class R {
         public static final int menuMenusButton2=0x7f080008;
         public static final int menuMenusButton3=0x7f080009;
         public static final int menuMenusTableLayout=0x7f080005;
+        public static final int menus=0x7f080014;
         public static final int navigation=0x7f080001;
+        public static final int search=0x7f080016;
         public static final int showMenuCarte=0x7f08000b;
         public static final int showMenuChildren=0x7f08000e;
         public static final int showMenuMenus=0x7f08000c;
@@ -67,6 +73,7 @@ public final class R {
         public static final int activity_show_main_menu=0x7f03000b;
         public static final int activity_show_menus_as_pop_up=0x7f03000c;
         public static final int navigation_item=0x7f03000d;
+        public static final int navigation_layout=0x7f03000e;
     }
     public static final class menu {
         public static final int global=0x7f070000;
@@ -85,6 +92,7 @@ public final class R {
         public static final int show_menus_as_pop_up=0x7f07000d;
     }
     public static final class string {
+        public static final int action_basket=0x7f05002e;
         public static final int action_example=0x7f05002d;
         public static final int action_settings=0x7f050005;
         /**   
@@ -177,6 +185,7 @@ public final class R {
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f060001;
+        public static final int AppTheme=0x7f060002;
+        public static final int NavigationItem=0x7f060001;
     }
 }
