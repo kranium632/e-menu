@@ -14,6 +14,7 @@ public class NavigationActivity extends FragmentActivity {
 	
 	
 	NavigationFragment nav;
+	String current;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -22,15 +23,17 @@ public class NavigationActivity extends FragmentActivity {
 		
 		nav = new NavigationFragment(this);
 		MainMenuFragment content = new MainMenuFragment(this);
-		BasketButtonFragment basket = new BasketButtonFragment();
+		//BasketButtonFragment basket = new BasketButtonFragment();
 		
 		FragmentTransaction trans = getSupportFragmentManager().beginTransaction();
 		
-		trans.add(R.id.buttonBasketFrame, basket);
+		//trans.add(R.id.buttonBasketFrame, basket);
 		trans.add(R.id.navigation, nav);
 		trans.add(R.id.content, content);
 		
 		trans.commit();
+		
+		current = content.position;
 	}
 	
 	public void goTo(ContentFragment content){
@@ -38,14 +41,23 @@ public class NavigationActivity extends FragmentActivity {
 		FragmentTransaction trans = getSupportFragmentManager().beginTransaction();
 
 		trans.replace(R.id.content, content);
+		
+		if(!current.equals(HOME)){
+			getSupportFragmentManager().popBackStack();
+		}
+		
 		trans.addToBackStack(null);
 
 		trans.commit();
+		
+		current = content.position;
 
 	}
 	
 	public void nowIn(String position){
+		current = position;
 		nav.nowIn(position);
+		
 	}
 
 	

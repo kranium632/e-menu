@@ -33,7 +33,7 @@ public class MenusFragment extends ContentFragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		parent.nowIn(nav_pos);
+		parentActivity.nowIn(position);
 		/*
 		 * Crï¿½er X pages de menus, oï¿½ X = m.size()/4
 		 * Pour chaque menu contenus dans m, sur chaque page, charger 4 menus,
@@ -68,7 +68,7 @@ public class MenusFragment extends ContentFragment {
 				buttonToMod.setVisibility(View.INVISIBLE);
 			}
 			else {
-				buttonToMod.setText(menus.get(nbr).getName() + "\n" + menus.get(nbr).getPrix() + " €");
+				buttonToMod.setText(menus.get(nbr).getName() + "\n" + menus.get(nbr).getPrix() + " ï¿½");
 				buttonToMod.setTag(menus.get(nbr).getId());
 				buttonToMod.setOnClickListener(onButtonClicked);
 			}

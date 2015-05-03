@@ -31,13 +31,13 @@ public class BasketButtonFragment extends Fragment implements OnClickListener {
 	}
 	
 	public void showBasket(View v){
-		Fragment baskFrag = new BasketFragment();
-		
-		FragmentTransaction fragTrans = getFragmentManager().beginTransaction();
-		
-		fragTrans.replace(R.id.content, baskFrag);
-		fragTrans.addToBackStack(null);
-
-		fragTrans.commit();
+//		Fragment baskFrag = new BasketFragment();
+//		
+//		FragmentTransaction fragTrans = getFragmentManager().beginTransaction();
+//		
+//		fragTrans.replace(R.id.content, baskFrag);
+//		fragTrans.addToBackStack(null);
+//
+//		fragTrans.commit();
 	}
 }

@@ -8,13 +8,13 @@ import android.view.ViewGroup;
 
 public abstract class ContentFragment extends Fragment {
 
-	protected NavigationActivity parent;
-	public String nav_pos;
+	protected NavigationActivity parentActivity;
+	public String position;
 	
 	
 	public ContentFragment(NavigationActivity parent, String nav_pos){
-		this.parent = parent;
-		this.nav_pos = nav_pos;
+		this.parentActivity = parent;
+		this.position = nav_pos;
 	}
 	
 }

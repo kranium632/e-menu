@@ -72,10 +72,10 @@ public class NavigationFragment extends Fragment implements OnClickListener {
 				content = new SearchFragment(parent);
 				parent.goTo(content);
 				break;
-//			case R.id.nav_basket:
-//				content = new BasketFragment(parent);
-//				parent.goTo(content);
-//				break;
+			case R.id.nav_basket:
+				content = new BasketFragment(parent);
+				parent.goTo(content);
+				break;
 			default:
 				break;
 			}

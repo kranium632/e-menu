@@ -15,7 +15,7 @@ public class ChildrenMenuFragment extends ContentFragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		parent.nowIn(nav_pos);
+		parentActivity.nowIn(position);
 		View v = inflater.inflate(R.layout.activity_menu_children, container,
 				false);
 		return v;

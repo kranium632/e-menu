@@ -33,7 +33,7 @@ public class MainMenuFragment extends ContentFragment implements
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		parent.nowIn(nav_pos);
+		parentActivity.nowIn(position);
 
 		View v = inflater.inflate(R.layout.activity_show_main_menu, container,
 				false);
@@ -77,30 +77,30 @@ public class MainMenuFragment extends ContentFragment implements
 	}
 
 	public void showMenuCarte(View v1) {
-		ContentFragment carte = new CarteFragment(parent);
-		parent.goTo(carte);
+		ContentFragment carte = new CarteFragment(parentActivity);
+		parentActivity.goTo(carte);
 	}
 
 	public void showMenuMenus(View v2) {
-		ContentFragment menu = new MenusFragment(parent);
+		ContentFragment menu = new MenusFragment(parentActivity);
 
 		Bundle bundle = new Bundle();
 		bundle.putInt(MenusFragment.START, 0);
 		menu.setArguments(bundle);
 
-		parent.goTo(menu);
+		parentActivity.goTo(menu);
 
 	}
 
 	public void showMenuChildren(View v3) {
-		ContentFragment ch = new ChildrenMenuFragment(parent);
-		parent.goTo(ch);
+		ContentFragment ch = new ChildrenMenuFragment(parentActivity);
+		parentActivity.goTo(ch);
 
 	}
 
 	public void showMenuSearch(View v4) {
-		ContentFragment search = new SearchFragment(parent);
-		parent.goTo(search);
+		ContentFragment search = new SearchFragment(parentActivity);
+		parentActivity.goTo(search);
 	}
 
 	@Override

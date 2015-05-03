@@ -15,11 +15,16 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class BasketFragment extends Fragment {
+public class BasketFragment extends ContentFragment {
+
+	public BasketFragment(NavigationActivity parent) {
+		super(parent, NavigationActivity.BASKET);
+	}
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
+		parentActivity.nowIn(position);
 		View v = inflater.inflate(R.layout.basket_fragment, container, false);
 		Vector<Plat> meals = GlobalBasket.getMeals();
 		Vector<MenuA> menus = GlobalBasket.getMenus();

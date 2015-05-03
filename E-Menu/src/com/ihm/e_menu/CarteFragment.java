@@ -18,7 +18,7 @@ public class CarteFragment extends ContentFragment implements OnClickListener {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		parent.nowIn(nav_pos);
+		parentActivity.nowIn(position);
 		View v = inflater.inflate(R.layout.activity_menu_carte, container, false);
 		
 		Button b = (Button)v.findViewById(R.id.mealsButton);

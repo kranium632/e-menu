@@ -21,13 +21,13 @@
             android:layout_height="match_parent" />
     </LinearLayout>
 
-    <FrameLayout
-        android:id="@+id/buttonBasketFrame"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true" >
-    </FrameLayout>
+<!--     <FrameLayout -->
+<!--         android:id="@+id/buttonBasketFrame" -->
+<!--         android:layout_width="wrap_content" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:layout_alignParentEnd="true" -->
+<!--         android:layout_alignParentRight="true" -->
+<!--         android:layout_alignParentTop="true" > -->
+<!--     </FrameLayout> -->
 
 </RelativeLayout>
