@@ -20,6 +20,7 @@
         <item name="android:minHeight">?android:attr/listPreferredItemHeightSmall</item>
         <item name="android:textAppearance">?android:attr/textAppearanceListItemSmall</item>
         <item name="android:textColor">#fff</item>
+        <item name="android:clickable">true</item>
     </style>
 
     <!-- Application theme. -->

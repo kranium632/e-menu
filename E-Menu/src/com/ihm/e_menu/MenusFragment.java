@@ -85,7 +85,7 @@ public class MenusFragment extends Fragment {
 		
 		trans.replace(R.id.content, menu);
 		trans.addToBackStack(null);
-
+		
 		trans.commit();
 	}
 	

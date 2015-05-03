@@ -15,11 +15,14 @@ public class NavigationActivity extends FragmentActivity {
 		
 		NavigationFragment nav = new NavigationFragment();
 		MainMenuFragment content = new MainMenuFragment();
+		BasketFragment basket = new BasketFragment();
 		
 		FragmentTransaction trans = getSupportFragmentManager().beginTransaction();
 		
+		trans.add(R.id.buttonBasket, basket);
 		trans.add(R.id.navigation, nav);
 		trans.add(R.id.content, content);
+		
 		trans.commit();
 	}
 
