@@ -70,9 +70,9 @@ public class CarteFragment extends ContentFragment implements OnClickListener {
 		}
 		 
 		if(plats != null){
-			MealsAdapter adapter = new MealsAdapter(parentActivity, R.layout.item_list_row, plats);
+			CarteItemAdapter adapter = new CarteItemAdapter(parentActivity, R.layout.item_list_row, plats);
 			
-			Fragment carte = new ItemListFragment(parentActivity,adapter);
+			Fragment carte = new CarteListFragment(parentActivity,adapter);
 
 			FragmentTransaction trans = getFragmentManager().beginTransaction();
 

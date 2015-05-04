@@ -8,14 +8,14 @@ import android.view.ViewGroup;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
-public class ItemListFragment extends ContentFragment {
+public class CarteListFragment extends ContentFragment {
 	
 	public static final String START = "start";	
 
 	private ListAdapter adapter;
 
 	
-	public ItemListFragment(NavigationActivity parent, ListAdapter adapter) {
+	public CarteListFragment(NavigationActivity parent, ListAdapter adapter) {
 		super(parent, NavigationActivity.CARTE);
 		this.adapter = adapter;
 	}

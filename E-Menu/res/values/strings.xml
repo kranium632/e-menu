@@ -68,6 +68,8 @@
     <string name="product">Produit</string>
     <string name="itemName">itemName</string>
     <string name="itemPrice">itemPrice</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
     
 
 </resources>

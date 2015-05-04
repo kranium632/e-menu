@@ -11,13 +11,13 @@ import android.widget.TextView;
 
 import com.ihm.e_menu.types.Plat;
 
-public class MealsAdapter extends ArrayAdapter<Plat> {
+public class CarteItemAdapter extends ArrayAdapter<Plat> {
 
-	public MealsAdapter(Context context, int resource) {
+	public CarteItemAdapter(Context context, int resource) {
 		super(context, resource);
 	}
 	
-	public MealsAdapter(Context context, int resource, List<Plat> list){
+	public CarteItemAdapter(Context context, int resource, List<Plat> list){
 		super(context,resource,list);
 	}
 
@@ -37,7 +37,7 @@ public class MealsAdapter extends ArrayAdapter<Plat> {
 		tv.setText(p.getName());
 		
 		tv = (TextView) v.findViewById(R.id.itemPrice);
-		tv.setText("  "+p.getPrix());
+		tv.setText("  "+p.getPrix()+ "€");
 		
 		
 		return v;
