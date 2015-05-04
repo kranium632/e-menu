@@ -68,4 +68,26 @@ public class GlobalBasket {
 	public static void setBasket(Basket basket) {
 		GlobalBasket.basket = basket;
 	}
+	
+	public static int getNumberOf(Plat p){
+		int nb = 0;
+		
+		for(Plat pl : GlobalBasket.basket.getMeals()){
+			if(pl.id == p.id)
+				nb++;
+		}
+		
+		return nb;
+	}
+	
+	public static int getNumberOf(Boisson b){
+		int nb = 0;
+		
+		for(Plat pl : GlobalBasket.basket.getDrinks()){
+			if(pl.id == b.id)
+				nb++;
+		}
+		
+		return nb;
+	}
 }

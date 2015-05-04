@@ -12,6 +12,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.ihm.e_menu.types.Boisson;
 import com.ihm.e_menu.types.CompleteList;
@@ -64,8 +65,9 @@ public class DetailedMenuFragment extends DialogFragment implements OnClickListe
 	@Override
 	public void onClick(View v) {
 		if (this.m != null){
-			Vibrator vibe = ((Vibrator)getActivity().getSystemService(Context.VIBRATOR_SERVICE));
-			vibe.vibrate(50);
+			String text = m.getName() +" ajouté au panier";
+			Toast toast = Toast.makeText(v.getContext(), text,Toast.LENGTH_SHORT);
+			toast.show();
 			GlobalBasket.addMenu(m);
 		}
 	}

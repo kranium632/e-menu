@@ -86,4 +86,18 @@ public class Plat {
 	public void setPrix(float prix) {
 		this.prix = prix;
 	}
+
+	public void addToBasket() {
+		GlobalBasket.addPlat(this);
+	}
+	
+	public void removeFromBasket(){
+		if(GlobalBasket.getMeals().contains(this)){
+			GlobalBasket.removePlat(this);
+		}
+	}
+
+	public int getNumberInBasket() {
+		return GlobalBasket.getNumberOf(this);
+	}
 }

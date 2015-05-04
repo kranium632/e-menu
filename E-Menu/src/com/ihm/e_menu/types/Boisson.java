@@ -8,4 +8,19 @@ public class Boisson extends Plat {
 		super(name, id, type, description, description, null, tags, prix);
 	}
 
+	@Override
+	public void addToBasket() {
+		GlobalBasket.addBoisson(this);
+	}
+	
+	@Override
+	public void removeFromBasket() {
+		if(GlobalBasket.getDrinks().contains(this)){
+			GlobalBasket.removeBoisson(this);
+		}
+	}
+
+	public int getNumberInBasket() {
+		return GlobalBasket.getNumberOf(this);
+	}
 }
