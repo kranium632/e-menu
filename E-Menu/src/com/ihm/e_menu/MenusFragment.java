@@ -38,15 +38,15 @@ public class MenusFragment extends ContentFragment {
 			Bundle savedInstanceState) {
 		parentActivity.nowIn(position);
 		/*
-		 * Créer X pages de menus, où X = m.size()/4
+		 * Crï¿½er X pages de menus, oï¿½ X = m.size()/4
 		 * Pour chaque menu contenus dans m, sur chaque page, charger 4 menus,
 		 * modifier les nom des boutons du template activity_menu_menus.xml "menuMenusButtonX",
-		 * où X = {1, 2, 3, 4}.
+		 * oï¿½ X = {1, 2, 3, 4}.
 		 * 
-		 * Pour chaque clic de boutons, créer une pop-up ou une activité montrant le descriptif du menu
+		 * Pour chaque clic de boutons, crï¿½er une pop-up ou une activitï¿½ montrant le descriptif du menu
 		 * 
-		 * À chaque changement de page de menus, relancer la présente activité en modifiant les noms des boutons
-		 * pour incrémenter de 4 les menus affichés (si on affichait les menu 1 à 4, on affiche les menus 5 à 8 et ainsi de suite).
+		 * ï¿½ chaque changement de page de menus, relancer la prï¿½sente activitï¿½ en modifiant les noms des boutons
+		 * pour incrï¿½menter de 4 les menus affichï¿½s (si on affichait les menu 1 ï¿½ 4, on affiche les menus 5 ï¿½ 8 et ainsi de suite).
 		 * 
 		 */
 
@@ -65,7 +65,7 @@ public class MenusFragment extends ContentFragment {
 			}
 			else {
 				if (menus.get(nbr).getType() == SQL_Access.MENU_ADULTE){
-					buttonToMod.setText(menus.get(nbr).getName() + "\n" + menus.get(nbr).getPrix() + "€");
+					buttonToMod.setText(menus.get(nbr).getName() + "\n" + menus.get(nbr).getPrix() + "â‚¬");
 					buttonToMod.setTag(menus.get(nbr).getId());
 					buttonToMod.setOnClickListener(onButtonClicked);
 				}

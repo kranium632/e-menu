@@ -23,9 +23,9 @@ public class Dummies {
 
 	public static final Aliment getDummyAlimentViande(){
 		Vector<String> tags = new Vector<String>();
-		tags.add("Côte");
+		tags.add("CÃ´te");
 		tags.add("Boeuf");
-		return new Aliment("Côte de Boeuf", 0, ALIMENT_PLAT, "Côte de boeuf de 250 grammes bien de chez nous.", tags, (float)-1.0);
+		return new Aliment("CÃ´te de Boeuf", 0, ALIMENT_PLAT, "CÃ´te de boeuf de 250 grammes bien de chez nous.", tags, (float)-1.0);
 	}
 	
 	public static final Aliment getDummyAlimentLegumes(){
@@ -39,7 +39,7 @@ public class Dummies {
 		Vector<String> tags = new Vector<String>();
 		tags.add("Glace");
 		tags.add("Vanille");
-		return new Aliment("Glace à la Vanille", 2, ALIMENT_DESSERT, "Glace à la vanille.", tags, (float)-1.0);
+		return new Aliment("Glace Ã  la Vanille", 2, ALIMENT_DESSERT, "Glace Ã  la vanille.", tags, (float)-1.0);
 	}
 
 	public static final Aliment getDummyAlimentPatate(){
@@ -47,7 +47,7 @@ public class Dummies {
 		tags.add("Pomme");
 		tags.add("Terre");
 		tags.add("Bio");
-		return new Aliment("Pommes de Terre", 3, ALIMENT_PLAT, "Pommes de terre biologique de nos contrées.", tags, (float)-1.0);
+		return new Aliment("Pommes de Terre", 3, ALIMENT_PLAT, "Pommes de terre biologique de nos contrÃ©es.", tags, (float)-1.0);
 	}
 
 	public static final Aliment getDummyAlimentSalade(){
@@ -64,9 +64,9 @@ public class Dummies {
 		tags.add("Tomate");
 		tags.add("Vodka");
 		tags.add("Citron");
-		tags.add("Épices");
-		tags.add("Céleri");
-		String description = "Cocktail plus ou moins fortement pimenté et épicé selon les goûts, à base de vodka, de jus de tomate, de jus de citron et d'épices telles que piment, sauce Tabasco, sauce Worcestershire, poivre, sel au céleri...";
+		tags.add("Ã‰pices");
+		tags.add("CÃ©leri");
+		String description = "Cocktail plus ou moins fortement pimentÃ© et Ã©picÃ© selon les goÃ»ts, Ã  base de vodka, de jus de tomate, de jus de citron et d'Ã©pices telles que piment, sauce Tabasco, sauce Worcestershire, poivre, sel au cÃ©leri...";
 		return new Boisson("Bloody Mary", 2, ALIMENT_BOISSON, description, tags, (float)7.0);
 	}
 	
@@ -84,13 +84,13 @@ public class Dummies {
 		tags.addAll(getDummyAlimentViande().getTags());
 		tags.addAll(getDummyAlimentLegumes().getTags());
 		
-		String description = "Côte de Boeuf de 250 gr. origine France servie avec ses frites rustiques.";
+		String description = "CÃ´te de Boeuf de 250 gr. origine France servie avec ses frites rustiques.";
 		
 		Vector<Aliment> aliments = new Vector<Aliment>();
 		aliments.add(getDummyAlimentViande());
 		aliments.add(getDummyAlimentLegumes());
 		
-		return new Plat("Côte de Boeuf et ses Frites rustiques", 0, PLAT_PLAT, description, "link:none", aliments, tags, (float)10.0);
+		return new Plat("CÃ´te de Boeuf et ses Frites rustiques", 0, PLAT_PLAT, description, "link:none", aliments, tags, (float)10.0);
 	}
 	
 	public static final Plat getDummyEntree(){
@@ -113,7 +113,7 @@ public class Dummies {
 		tags.addAll(getDummyAlimentLegumes().getTags());
 		tags.addAll(getDummyWine().getTags());
 		
-		String description = "Côte de Boeuf servie avec ses frites rustiques et un verre de vin.";
+		String description = "CÃ´te de Boeuf servie avec ses frites rustiques et un verre de vin.";
 		
 		Vector<Plat> plat = new Vector<Plat>();
 		plat.add(getDummyPlat());
@@ -121,7 +121,7 @@ public class Dummies {
 		Vector<Boisson> boissons = new Vector<Boisson>();
 		boissons.add(getDummyWine());
 		
-		return new MenuA("Côte de Boeuf #1", 0, MENU_ADULTE, description, "link:none", plat, boissons, tags, (float)10.0);
+		return new MenuA("CÃ´te de Boeuf #1", 0, MENU_ADULTE, description, "link:none", plat, boissons, tags, (float)10.0);
 	}
 	
 	public static final MenuA getDummyMenu2(){
@@ -131,7 +131,7 @@ public class Dummies {
 		tags.addAll(getDummyAlimentGlace().getTags());
 		tags.addAll(getDummyWine().getTags());
 		
-		String description = "Côte de Boeuf servie avec ses frites rustiques et un verre de vin.\n3 boules de glace vanille en dessert.";
+		String description = "CÃ´te de Boeuf servie avec ses frites rustiques et un verre de vin.\n3 boules de glace vanille en dessert.";
 		
 		Vector<Plat> plat = new Vector<Plat>();
 		plat.add(getDummyPlat());
@@ -140,7 +140,7 @@ public class Dummies {
 		Vector<Boisson> boissons = new Vector<Boisson>();
 		boissons.add(getDummyWine());
 		
-		return new MenuA("Côte de Boeuf #2", 1, MENU_ADULTE, description, "link:none", plat, boissons, tags, (float)12.0);
+		return new MenuA("CÃ´te de Boeuf #2", 1, MENU_ADULTE, description, "link:none", plat, boissons, tags, (float)12.0);
 	}
 	
 	public static final MenuA getDummyMenu3(){
@@ -150,7 +150,7 @@ public class Dummies {
 		tags.addAll(getDummyAlimentGlace().getTags());
 		tags.addAll(getDummyWine().getTags());
 		
-		String description = "Côte de Boeuf servie avec ses frites rustiques et un verre de vin.\nSalade de patates en entrée.";
+		String description = "CÃ´te de Boeuf servie avec ses frites rustiques et un verre de vin.\nSalade de patates en entrÃ©e.";
 		
 		Vector<Plat> plat = new Vector<Plat>();
 		plat.add(getDummyPlat());
@@ -159,7 +159,7 @@ public class Dummies {
 		Vector<Boisson> boissons = new Vector<Boisson>();
 		boissons.add(getDummyWine());
 		
-		return new MenuA("Côte de Boeuf #3", 2, MENU_ADULTE, description, "link:none", plat, boissons, tags, (float)11.0);
+		return new MenuA("CÃ´te de Boeuf #3", 2, MENU_ADULTE, description, "link:none", plat, boissons, tags, (float)11.0);
 	}
 	
 	public static final Plat getDummyDessert(){
@@ -171,6 +171,6 @@ public class Dummies {
 		Vector<Aliment> aliments = new Vector<Aliment>();
 		aliments.add(getDummyAlimentGlace());
 		
-		return new Plat("Glace à la vanille 3 boules", 0, PLAT_DESSERT, description, "link:none", aliments, tags, (float)5.0);
+		return new Plat("Glace Ã  la vanille 3 boules", 0, PLAT_DESSERT, description, "link:none", aliments, tags, (float)5.0);
 	}
 }
