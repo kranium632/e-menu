@@ -33,8 +33,6 @@ public class SQL_Access {
 		Vector<Aliment> results = new Vector<Aliment>();
 		results.add(Dummies.getDummyAlimentViande());
 		results.add(Dummies.getDummyAlimentLegumes());
-		results.add(Dummies.getDummyDrink());
-		results.add(Dummies.getDummyWine());
 		return results;
 	}
 	
@@ -103,8 +101,8 @@ public class SQL_Access {
 	 * 
 	 * @return Vector<Aliment>
 	 */
-	public static Vector<Aliment> getWines(){
-		Vector<Aliment> results = new Vector<Aliment>();
+	public static Vector<Plat> getWines(){
+		Vector<Plat> results = new Vector<Plat>();
 		results.add(Dummies.getDummyWine());
 		return results;
 	}
@@ -114,8 +112,8 @@ public class SQL_Access {
 	 * 
 	 * @return Vector<Aliment>
 	 */
-	public static Vector<Aliment> getWines(int id[]){
-		Vector<Aliment> results = new Vector<Aliment>();
+	public static Vector<Plat> getWines(int id[]){
+		Vector<Plat> results = new Vector<Plat>();
 		results.add(Dummies.getDummyWine());
 		return results;
 	}
@@ -182,7 +180,7 @@ public class SQL_Access {
 	public static Basket getCompleteList(){
 		/*
 		Thread t;
-		// Déclaration d'un handler pour pouvoir exécuter des objets Runnable dans l'UI Thread
+		// Dï¿½claration d'un handler pour pouvoir exï¿½cuter des objets Runnable dans l'UI Thread
 	    Handler msgHandler = new Handler();
         t = new MonThread(msgHandler);
         */
@@ -193,7 +191,7 @@ public class SQL_Access {
 	
 	/* ********************************** */
 	/* GESTION DU THREAD DE ************* */
-	/* RÉCUPÉRATION DE LA BASE DE DONNÉES */
+	/* Rï¿½CUPï¿½RATION DE LA BASE DE DONNï¿½ES */
 	/* ********************************** */
 	/*
 	@Override
@@ -210,7 +208,7 @@ public class SQL_Access {
 	    t.interrupt();
 	}
 	//*/
-    // Thread qui va effectuer des opérations très longues...
+    // Thread qui va effectuer des opï¿½rations trï¿½s longues...
     public class MonThread extends Thread {
     	Handler handlerDial;
     	int i;
@@ -222,7 +220,7 @@ public class SQL_Access {
 
 		public void run() {
             // Traitement
-			//À remplacer par l'init du panier global
+			//ï¿½ remplacer par l'init du panier global
             try {
             	for (i=0; i<=100; i++)
             	{

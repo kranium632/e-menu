@@ -42,7 +42,7 @@ public class MealsFragment extends Fragment {
 				Plat p = meals.get(i);
 				if (p.getType() == SQL_Access.PLAT_PLAT){
 					tv = new TextView(v.getContext());
-					tv.setText(p.getName() + " - " + p.getPrix() + "€");
+					tv.setText(p.getName() + " - " + p.getPrix() + "ï¿½");
 					basketLayout.addView(tv);
 				}
 			}

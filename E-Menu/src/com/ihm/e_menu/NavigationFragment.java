@@ -25,24 +25,24 @@ public class NavigationFragment extends Fragment implements OnClickListener {
 			Bundle savedInstanceState) {
 		View v = inflater.inflate(R.layout.navigation_layout, container, false);
 
-		TextView tv = (TextView) v.findViewById(R.id.nav_home);
+		TextView tv = (TextView) v.findViewById(R.id.navHome);
 		tv.setBackgroundColor(Color.LTGRAY);
 		selected = tv;
 		tv.setOnClickListener(this);
 
-		tv = (TextView) v.findViewById(R.id.nav_menus);
+		tv = (TextView) v.findViewById(R.id.navMenus);
 		tv.setOnClickListener(this);
 
-		tv = (TextView) v.findViewById(R.id.nav_carte);
+		tv = (TextView) v.findViewById(R.id.navCarte);
 		tv.setOnClickListener(this);
 
-		tv = (TextView) v.findViewById(R.id.nav_children);
+		tv = (TextView) v.findViewById(R.id.navChildren);
 		tv.setOnClickListener(this);
 
-		tv = (TextView) v.findViewById(R.id.nav_search);
+		tv = (TextView) v.findViewById(R.id.navSearch);
 		tv.setOnClickListener(this);
 
-		tv = (TextView) v.findViewById(R.id.nav_basket);
+		tv = (TextView) v.findViewById(R.id.navBasket);
 		tv.setOnClickListener(this);
 
 		return v;
@@ -53,27 +53,27 @@ public class NavigationFragment extends Fragment implements OnClickListener {
 		if (!v.equals(selected)) {
 			ContentFragment content;
 			switch (v.getId()) {
-			case R.id.nav_home:
+			case R.id.navHome:
 				content = new MainMenuFragment(parent);
 				parent.goTo(content);
 				break;
-			case R.id.nav_carte:
+			case R.id.navCarte:
 				content = new CarteFragment(parent);
 				parent.goTo(content);
 				break;
-			case R.id.nav_menus:
+			case R.id.navMenus:
 				content = new MenusFragment(parent);
 				parent.goTo(content);
 				break;
-			case R.id.nav_children:
+			case R.id.navChildren:
 				content = new ChildrenMenuFragment(parent);
 				parent.goTo(content);
 				break;
-			case R.id.nav_search:
+			case R.id.navSearch:
 				content = new SearchFragment(parent);
 				parent.goTo(content);
 				break;
-			case R.id.nav_basket:
+			case R.id.navBasket:
 				content = new BasketFragment(parent);
 				parent.goTo(content);
 				break;
@@ -93,27 +93,27 @@ public class NavigationFragment extends Fragment implements OnClickListener {
 
 	public void nowIn(String menu) {
 		if (menu.equals(NavigationActivity.HOME)) {
-			select(getView().findViewById(R.id.nav_home));
+			select(getView().findViewById(R.id.navHome));
 		}
 
 		else if (menu.equals(NavigationActivity.CARTE)) {
-			select(getView().findViewById(R.id.nav_carte));
+			select(getView().findViewById(R.id.navCarte));
 		}
 
 		else if (menu.equals(NavigationActivity.MENUS)) {
-			select(getView().findViewById(R.id.nav_menus));
+			select(getView().findViewById(R.id.navMenus));
 		}
 
 		else if (menu.equals(NavigationActivity.CHILDREN)) {
-			select(getView().findViewById(R.id.nav_children));
+			select(getView().findViewById(R.id.navChildren));
 		}
 
 		else if (menu.equals(NavigationActivity.SEARCH)) {
-			select(getView().findViewById(R.id.nav_search));
+			select(getView().findViewById(R.id.navSearch));
 		}
 
 		else if (menu.equals(NavigationActivity.BASKET)) {
-			select(getView().findViewById(R.id.nav_basket));
+			select(getView().findViewById(R.id.navBasket));
 		}
 
 	}

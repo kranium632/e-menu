@@ -6,32 +6,32 @@
     android:orientation="vertical" >
 
     <TextView
-        android:id="@+id/nav_home"
+        android:id="@+id/navHome"
         style="@style/NavigationItem"
         android:text="@string/app_name" />
 
     <TextView
-        android:id="@+id/nav_carte"
+        android:id="@+id/navCarte"
         style="@style/NavigationItem"
         android:text="@string/main_menu_carte" />
 
     <TextView
-        android:id="@+id/nav_menus"
+        android:id="@+id/navMenus"
         style="@style/NavigationItem"
         android:text="@string/main_menu_menus" />
 
     <TextView
-        android:id="@+id/nav_children"
+        android:id="@+id/navChildren"
         style="@style/NavigationItem"
         android:text="@string/main_menu_enfants" />
 
     <TextView
-        android:id="@+id/nav_search"
+        android:id="@+id/navSearch"
         style="@style/NavigationItem"
         android:text="@string/main_menu_recherche" />
 
     <TextView
-        android:id="@+id/nav_basket"
+        android:id="@+id/navBasket"
         style="@style/NavigationItem"
         android:text="@string/action_basket" />
 
