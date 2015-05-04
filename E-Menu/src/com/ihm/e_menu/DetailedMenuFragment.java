@@ -2,7 +2,9 @@ package com.ihm.e_menu;
 
 import java.util.Vector;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,6 +35,7 @@ public class DetailedMenuFragment extends DialogFragment implements OnClickListe
 
 		Button basket = (Button) v.findViewById(R.id.addToBasket);
 		basket.setOnClickListener(this);
+		basket.setHapticFeedbackEnabled(true);
 
 		Bundle extras = getArguments();
 		int id = extras.getInt(MenusFragment.MENU_ID);
@@ -60,8 +63,11 @@ public class DetailedMenuFragment extends DialogFragment implements OnClickListe
 
 	@Override
 	public void onClick(View v) {
-		if (this.m != null)
+		if (this.m != null){
+			Vibrator vibe = ((Vibrator)getActivity().getSystemService(Context.VIBRATOR_SERVICE));
+			vibe.vibrate(50);
 			GlobalBasket.addMenu(m);
+		}
 	}
 
 }

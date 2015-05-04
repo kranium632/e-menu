@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:gravity="bottom" >
 
     <LinearLayout
         android:id="@+id/basketLayout"
@@ -9,12 +10,32 @@
         android:layout_height="match_parent"
         android:orientation="vertical" >
     </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/basketButtonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom"
+        android:orientation="horizontal" >
 
     <Button
         android:id="@+id/emptyBasket"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true" 
-        android:text="@string/emptyBasket"/>
+        android:layout_height="fill_parent"
+        android:layout_gravity="left|center_vertical|center_horizontal"
+        android:gravity="right"
+        android:text="@string/emptyBasket"
+        android:textAlignment="center" />
 
+    <Button
+        android:id="@+id/checkout"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_gravity="right|center_vertical|center_horizontal"
+        android:gravity="left"
+        android:text="@string/validateBasket"
+        android:textAlignment="center" />
+
+    </LinearLayout>
 </RelativeLayout>

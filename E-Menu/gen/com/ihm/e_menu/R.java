@@ -32,17 +32,19 @@ public final class R {
         public static final int ic_launcher=0x7f020002;
     }
     public static final class id {
-        public static final int action_settings=0x7f080023;
+        public static final int action_settings=0x7f080025;
         public static final int activityMenuStarters=0x7f08000e;
         public static final int addToBasket=0x7f080017;
         public static final int basketButton=0x7f080018;
+        public static final int basketButtonsLayout=0x7f08001a;
         public static final int basketLayout=0x7f080019;
         public static final int carteMenuLinearLayout=0x7f080000;
-        public static final int carteTemplateLayout=0x7f08001b;
+        public static final int carteTemplateLayout=0x7f08001d;
+        public static final int checkout=0x7f08001c;
         public static final int content=0x7f080010;
         public static final int dessertsButton=0x7f080007;
         public static final int drinksButton=0x7f080008;
-        public static final int emptyBasket=0x7f08001a;
+        public static final int emptyBasket=0x7f08001b;
         public static final int frame=0x7f08000f;
         public static final int mainMenuTableLayout1=0x7f080002;
         public static final int mainMenuTableRow1=0x7f080003;
@@ -54,12 +56,12 @@ public final class R {
         public static final int menuMenusButton2=0x7f08000c;
         public static final int menuMenusButton3=0x7f08000d;
         public static final int menuMenusTableLayout=0x7f080009;
-        public static final int nav_basket=0x7f080022;
-        public static final int nav_carte=0x7f08001e;
-        public static final int nav_children=0x7f080020;
-        public static final int nav_home=0x7f08001d;
-        public static final int nav_menus=0x7f08001f;
-        public static final int nav_search=0x7f080021;
+        public static final int nav_basket=0x7f080024;
+        public static final int nav_carte=0x7f080020;
+        public static final int nav_children=0x7f080022;
+        public static final int nav_home=0x7f08001f;
+        public static final int nav_menus=0x7f080021;
+        public static final int nav_search=0x7f080023;
         public static final int navigation=0x7f080001;
         public static final int showMenuCarte=0x7f080011;
         public static final int showMenuChildren=0x7f080014;
@@ -67,7 +69,7 @@ public final class R {
         public static final int showMenuSearch=0x7f080015;
         public static final int startersButton=0x7f080004;
         public static final int tv=0x7f080016;
-        public static final int tvCarte=0x7f08001c;
+        public static final int tvCarte=0x7f08001e;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -172,6 +174,7 @@ public final class R {
         public static final int title_section1=0x7f050028;
         public static final int title_section2=0x7f050029;
         public static final int title_section3=0x7f05002a;
+        public static final int validateBasket=0x7f050030;
         public static final int welcome=0x7f050025;
     }
     public static final class style {

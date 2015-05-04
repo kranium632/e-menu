@@ -33,6 +33,9 @@ public class BasketFragment extends ContentFragment implements OnClickListener{
 		
 		Button empty = (Button)v.findViewById(R.id.emptyBasket);
 		empty.setOnClickListener(this);
+
+		Button checkout = (Button)v.findViewById(R.id.checkout);
+		checkout.setOnClickListener(this);
 		
 		Vector<Plat> meals = GlobalBasket.getMeals();
 		Vector<MenuA> menus = GlobalBasket.getMenus();
@@ -47,9 +50,13 @@ public class BasketFragment extends ContentFragment implements OnClickListener{
 		if ((menus.size() == 0) && (drinks.size() == 0) && (meals.size() == 0)){
 			tv = new TextView(v.getContext());
 			tv.setText("Le panier est actuellement vide.");
+			empty.setClickable(false);
+			checkout.setClickable(false);
 			basketLayout.addView(tv);
 		}
 		else {
+			empty.setClickable(true);
+			checkout.setClickable(true);
 			if (len != 0){
 				if (len == 1){
 					tv = new TextView(v.getContext());
@@ -115,7 +122,9 @@ public class BasketFragment extends ContentFragment implements OnClickListener{
 		case R.id.emptyBasket:
 			emptyBasket();
 			break;
-
+		case R.id.checkout:
+			this.checkout();
+			break;
 		default:
 			break;
 		}
@@ -130,5 +139,16 @@ public class BasketFragment extends ContentFragment implements OnClickListener{
 		tv.setText("Le panier est actuellement vide.");
 		layout.addView(tv);
 	}
+
+	private void checkout() {
+		//on envoie normalement le panier en cuisine
+		GlobalBasket.clearBasket();
+		LinearLayout layout = (LinearLayout)getView().findViewById(R.id.basketLayout);
+		layout.removeAllViews();
+		TextView tv = new TextView(getView().getContext());
+		tv.setText("Votre commande est validée.");
+		layout.addView(tv);
+	}
+
 
 }
