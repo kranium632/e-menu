@@ -138,6 +138,10 @@ public class BasketFragment extends ContentFragment implements OnClickListener{
 		TextView tv = new TextView(getView().getContext());
 		tv.setText("Le panier est actuellement vide.");
 		layout.addView(tv);
+		Button empty = (Button)getView().findViewById(R.id.emptyBasket);
+		Button checkout = (Button)getView().findViewById(R.id.checkout);
+		empty.setClickable(false);
+		checkout.setClickable(false);
 	}
 
 	private void checkout() {
@@ -148,6 +152,10 @@ public class BasketFragment extends ContentFragment implements OnClickListener{
 		TextView tv = new TextView(getView().getContext());
 		tv.setText("Votre commande est validée.");
 		layout.addView(tv);
+		Button empty = (Button)getView().findViewById(R.id.emptyBasket);
+		Button checkout = (Button)getView().findViewById(R.id.checkout);
+		empty.setClickable(false);
+		checkout.setClickable(false);
 	}
 
 
