@@ -32,7 +32,7 @@ public final class R {
         public static final int ic_launcher=0x7f020002;
     }
     public static final class id {
-        public static final int action_settings=0x7f080025;
+        public static final int action_settings=0x7f080028;
         public static final int activityMenuStarters=0x7f08000e;
         public static final int addToBasket=0x7f080017;
         public static final int basketButton=0x7f080018;
@@ -56,13 +56,16 @@ public final class R {
         public static final int menuMenusButton2=0x7f08000c;
         public static final int menuMenusButton3=0x7f08000d;
         public static final int menuMenusTableLayout=0x7f080009;
-        public static final int nav_basket=0x7f080024;
-        public static final int nav_carte=0x7f080020;
-        public static final int nav_children=0x7f080022;
-        public static final int nav_home=0x7f08001f;
-        public static final int nav_menus=0x7f080021;
-        public static final int nav_search=0x7f080023;
+        public static final int minusOne=0x7f08001f;
+        public static final int nav_basket=0x7f080027;
+        public static final int nav_carte=0x7f080023;
+        public static final int nav_children=0x7f080025;
+        public static final int nav_home=0x7f080022;
+        public static final int nav_menus=0x7f080024;
+        public static final int nav_search=0x7f080026;
         public static final int navigation=0x7f080001;
+        public static final int plusOne=0x7f080021;
+        public static final int product=0x7f080020;
         public static final int showMenuCarte=0x7f080011;
         public static final int showMenuChildren=0x7f080014;
         public static final int showMenuMenus=0x7f080012;
@@ -88,8 +91,9 @@ public final class R {
         public static final int basket_button=0x7f03000d;
         public static final int basket_fragment=0x7f03000e;
         public static final int carte_template_layout=0x7f03000f;
-        public static final int navigation_item=0x7f030010;
-        public static final int navigation_layout=0x7f030011;
+        public static final int display_layout=0x7f030010;
+        public static final int navigation_item=0x7f030011;
+        public static final int navigation_layout=0x7f030012;
     }
     public static final class menu {
         public static final int global=0x7f070000;
@@ -156,8 +160,11 @@ public final class R {
         public static final int menu_menus=0x7f050018;
         public static final int menu_search=0x7f05001d;
         public static final int menu_wines=0x7f05001a;
+        public static final int minusOne=0x7f050031;
         public static final int navigation_drawer_close=0x7f05002c;
         public static final int navigation_drawer_open=0x7f05002b;
+        public static final int plusOne=0x7f050032;
+        public static final int product=0x7f050033;
         public static final int title_activity_carte=0x7f050026;
         public static final int title_activity_menu_carte=0x7f050009;
         public static final int title_activity_menu_children=0x7f05000b;

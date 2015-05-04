@@ -63,6 +63,9 @@
     <string name="action_basket">Panier</string>
     <string name="emptyBasket">Vider le panier</string>
     <string name="validateBasket">Commander</string>
+    <string name="minusOne">-</string>
+    <string name="plusOne">+</string>
+    <string name="product">Produit</string>
     
 
 </resources>
