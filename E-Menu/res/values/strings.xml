@@ -66,6 +66,7 @@
     <string name="minusOne">-</string>
     <string name="plusOne">+</string>
     <string name="product">Produit</string>
+    <string name="productNumber">0</string>
     
 
 </resources>

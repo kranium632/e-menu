@@ -69,9 +69,19 @@ public class BasketFragment extends ContentFragment implements OnClickListener{
 					basketLayout.addView(tv);
 				}
 				for (int i = 0; i < len; i++){
+					LinearLayout ll = (LinearLayout)v.findViewById(R.id.displayLayout);
+					
+					TextView product = (TextView)v.findViewById(R.id.product);
+					//product.setText(menus.get(i).getName());
+					//product.setTag(menus.get(i).getId());
+					
+					TextView productNumber = (TextView)v.findViewById(R.id.productNumber);
+					//productNumber.setText("1");
+					/*
 					tv = new TextView(v.getContext());
 					tv.setText(menus.get(i).getName());
-					basketLayout.addView(tv);
+					*/
+					basketLayout.addView(ll);
 				}
 			}
 
