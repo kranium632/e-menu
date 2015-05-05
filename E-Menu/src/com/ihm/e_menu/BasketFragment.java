@@ -3,6 +3,7 @@ package com.ihm.e_menu;
 import java.util.Vector;
 
 import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -73,6 +74,9 @@ public class BasketFragment extends ContentFragment implements OnClickListener{
 					tv.setText(menus.get(i).getName());
 					basketLayout.addView(tv);
 				}
+				tv = new TextView(v.getContext());
+				tv.setText("\n");
+				basketLayout.addView(tv);
 			}
 
 			len = meals.size();
@@ -92,6 +96,9 @@ public class BasketFragment extends ContentFragment implements OnClickListener{
 					tv.setText(meals.get(i).getName());
 					basketLayout.addView(tv);
 				}
+				tv = new TextView(v.getContext());
+				tv.setText("\n");
+				basketLayout.addView(tv);
 			}
 
 			len = drinks.size();
@@ -150,7 +157,7 @@ public class BasketFragment extends ContentFragment implements OnClickListener{
 		LinearLayout layout = (LinearLayout)getView().findViewById(R.id.basketLayout);
 		layout.removeAllViews();
 		TextView tv = new TextView(getView().getContext());
-		tv.setText("Votre commande est validée.");
+		tv.setText("Votre commande est validï¿½e.");
 		layout.addView(tv);
 		Button empty = (Button)getView().findViewById(R.id.emptyBasket);
 		Button checkout = (Button)getView().findViewById(R.id.checkout);
